@@ -149,8 +149,56 @@
     transform: translate(-50%, -50%);
     text-align: center;
   }
-/* body{
+/* .team{
+     width: 20em;
+    height:auto;
+    position: absolute;
+    left:0; 
+    border:solid black 3px;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}   */
+.team{
+  display: flex;
+  justify-content: space-around;
+}
+/* .team p{
+   position: absolute; 
+  left:38%;
+  top:45%;
+  width:13em;
+   color:#f2db8d; 
+  font-size: 20px;
+  font-weight: bold;
+} */
+body{
     padding: 0;
     margin: 0;
-    background-color:lightsalmon;
-} */
+    background-color:rgba(0, 255, 255, 0.719);
+  
+}
+ .pinguin{
+   /* max-width: 40vw;
+   max-height: 80vh;  */
+   width: 20em;
+   height: 10em;
+   background-color: rgb(245, 245, 97);
+   margin-top:10em;
+   border-radius:20%;
+  position: relative;
+ } 
+ .pinguin p{
+  padding:2em;
+ }
+.palm1{
+  
+  /* right: 2%;
+  position:absolute; */
+}
+.salv{
+  width: 20em;
+  height: 20em;
+  position: absolute;
+  right: 14em;
+}
