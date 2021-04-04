@@ -1,17 +1,22 @@
-.html h2{
-   margin-left:40%;
-    color:blue;
-    
+.level h2{
+   /* margin-left:20%; */
+    color:black;
+    /* margin-top: 5em; */
+    position: absolute;
+    top:2em;
 }
 .html{
-
-    background-color:#d0d8dd;
-    width: 100vw;
-    height: 100vh;
+   
+    background-color:red;
+    /* width: 100vw;
+    height: 100vh; */
+    position: relative;
+    scroll-behavior: smooth;
 }
 .level{
     
-    background-color:#33adff ;
+    /* background-color:#33adff ; */
+    background-image: linear-gradient(red,orange);
     width: 100vw;
     height: 100vh;
     margin:0px;
@@ -19,6 +24,26 @@
     display: flex;
     justify-content: space-around;
     
+}
+#mapBtn{
+  background-color: inherit;
+  border: none;
+  outline:none;
+}
+.map{
+  height: 0;
+  width: 0;
+  transform: translateX(-100%);
+  transition: transform 0.3s linear;
+}
+.map.is--open{
+  height: 80vh;
+  width: 88vw;
+  transform: translateX(0%);
+  position: absolute;
+  left: 4em;
+  top:1%;
+
 }
 .dot1 {
     height: 40%;
@@ -36,7 +61,8 @@
   .dot2 {
     height: 40%;
     width: 20%;
-    background-color:whitesmoke;
+     background-color:whitesmoke; 
+    
     border-radius: 50%;
     margin-top: 20vh;
     /* display: flex;
@@ -149,8 +175,64 @@
     transform: translate(-50%, -50%);
     text-align: center;
   }
-/* body{
+/* .team{
+     width: 20em;
+    height:auto;
+    position: absolute;
+    left:0; 
+    border:solid black 3px;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}   */
+.team{
+  display: flex;
+  justify-content: space-around;
+  height: 80vh;
+  width: 100vw;
+  background-image: linear-gradient(orange, red)
+}
+/* .team p{
+   position: absolute; 
+  left:38%;
+  top:45%;
+  width:13em;
+   color:#f2db8d; 
+  font-size: 20px;
+  font-weight: bold;
+} */
+body{
     padding: 0;
     margin: 0;
-    background-color:lightsalmon;
-} */
+     /* background-color:rgb(253, 166, 67); */
+     /* background-image: url("../../public/images/sunset2.jpg"); */
+    
+    background-repeat: no-repeat;
+    /* background-size: 100vw 80vh;    */
+    background-color: red;
+    
+}
+ .pinguin{
+   /* max-width: 40vw;
+   max-height: 80vh;  */
+   width: 20em;
+   height: 10em;
+   background-color: rgb(245, 245, 97);
+   margin-top:10em;
+   border-radius:20%;
+  position: relative;
+ } 
+ .pinguin p{
+  padding:2em;
+ }
+.palm1{
+  
+  /* right: 2%;
+  position:absolute; */
+}
+.salv{
+  width: 20em;
+  height: 20em;
+  position: absolute;
+  right: 14em;
+}
