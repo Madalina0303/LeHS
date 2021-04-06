@@ -5,69 +5,6 @@
     font-family:sans-serif;
 }
 
-/*
- header{
-    background-color:black;
-    width: 100vw;
-    height: 2em;
-} 
-h3{
-    color: burlywood;
-}
-
-.main{
-     background-image: url('fantasy.jpg'); 
-    /* opacity: 0.5;*/
-    /* border: 5px solid black; */
-     /* height: 100vh;
-    width: 100vw;  
-    position: relative;
-}
-.account{
-    background-color: antiquewhite;
-    position: absolute;
-    right:10em;
-    top:10em;
-    border: 3px black solid;
-    padding: 1em;
-}
-img{
-     height:100vh;
-     width: 100vw;
-}
-#email,#password{
-    display: block;
-    background-color:#ecc393;
-    color:burlywood;
-    
-    margin-left:1em;
-    margin-bottom: 1em;
-    margin-right: 1em;
-    height: 2.5em;
-    width: 25em;
-}
-p{
-    margin-left: 1em;
-}
-
-.button{
-
-  position: relative;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  display: inline-block;
-}
-
-.button1 {
-    position: relative;
-    background-color: #4CAF50;} */ 
-
 
 .hero{
     height:100%;
@@ -120,19 +57,6 @@ p{
     cursor:pointer;
     border-radius: 50%; 
 }
-
-
-
-
- /* .btn-icons img{
-
-    top:20px;
-    width:10px;
-    cursor:pointer;
-    /*border-radius: 50%; 
-   
-    
-}  */
 
 
 .form-box{

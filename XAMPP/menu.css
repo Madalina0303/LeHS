@@ -1,0 +1,590 @@
+html {
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+.button {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+}
+.button:nth-child(1) {
+    background: url(https://static.wikia.nocookie.net/club-penguin-rewritten/images/a/ac/Dock_2020.png/revision/latest?cb=20200103030722) center center no-repeat;
+    background-size: cover;
+}
+.button span {
+    transition: all 0.6s ease;
+    font-size: 62px;
+    font-weight: 800;
+    font-family: sans-serif;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 6px;
+    background: black;
+    color: white;
+    mix-blend-mode: overlay;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.button span:hover {
+    background: #fff;
+    color: #000;
+    padding: 100%;
+}
+
+
+.button2 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background: url(https://clubpenguinmountains.com/wp-content/uploads/2020/01/pufflewilds.jpg?w=662) center center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: block;
+}
+.button2 span {
+    transition: all 0.6s ease;
+    overflow: hidden;
+    font-size: 62px;
+    font-weight: 800;
+    font-family: sans-serif;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.button2 span::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -50px;
+    left: -60px;
+    width: 90px;
+    height: 90px;
+    background: #000;
+    z-index: -1;
+    box-shadow: 0px 0px 120px #024768, 0px 0px 120px #04b0bc, 0px 0px 120px #33c9c7, 0px 0px 120px #94dfdd, 0px 0px 120px #97d3d3;
+    transition: all 0.3s ease;
+    transform: rotate(-45deg);
+}
+.button2 span:hover::after {
+    box-shadow: 40px -20px 0px #024768, 41px -20px 8px rgba(0, 0, 0, 0.3), 80px 20px 0px #04b0bc, 81px 20px 8px rgba(0, 0, 0, 0.3), 120px 60px 0px #22cbcb, 121px 60px 8px rgba(0, 0, 0, 0.3), 160px 100px 0px #94dfdd, 161px 100px 8px rgba(0, 0, 0, 0.3), 200px 120px 0px #97d3d3;
+}
+.button2 span:hover {
+    box-shadow: 4px 34px 24px rgba(0, 0, 0, 0.3);
+}
+.button3 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background: url(https://cdnb.artstation.com/p/assets/images/images/004/390/815/large/rachel-eady-the-wilds-room-2.jpg?1483343041) center center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: block;
+}
+.button3 span {
+    white-space: nowrap;
+    transition: all 2s ease;
+    overflow: hidden;
+    font-size: 82px;
+    font-weight: 800;
+    font-family: sans-serif;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.button3 span div {
+    display: inline-block;
+    position: relative;
+}
+.button3 span div:nth-child(1) {
+    transition: all 2s ease;
+}
+.button3 span div:nth-child(1)::after {
+    transition: all 1s ease;
+    content: 'S';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #fd1fbd;
+    z-index: -1;
+}
+.button3 span div:nth-child(1)::before {
+    transition: all 1.5s ease;
+    content: 'S';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #76ebf4;
+    z-index: -2;
+}
+.button3 span div:nth-child(2) {
+    transition: all 2s ease;
+}
+.button3 span div:nth-child(2)::after {
+    transition: all 1s ease;
+    content: 'e';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #fd1fbd;
+    z-index: -1;
+}
+.button3 span div:nth-child(2)::before {
+    transition: all 1.5s ease;
+    content: 'e';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #76ebf4;
+    z-index: -2;
+}
+.button3 span div:nth-child(3) {
+    transition: all 2s ease;
+}
+.button3 span div:nth-child(3)::after {
+    transition: all 1s ease;
+    content: 't';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #fd1fbd;
+    z-index: -1;
+}
+.button3 span div:nth-child(3)::before {
+    transition: all 1.5s ease;
+    content: 't';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #76ebf4;
+    z-index: -2;
+}
+.button3 span div:nth-child(4) {
+    transition: all 2s ease;
+}
+.button3 span div:nth-child(4)::after {
+    transition: all 1s ease;
+    content: 't';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #fd1fbd;
+    z-index: -1;
+}
+.button3 span div:nth-child(4)::before {
+    transition: all 1.5s ease;
+    content: 't';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #76ebf4;
+    z-index: -2;
+}
+.button3 span div:nth-child(5) {
+    transition: all 2s ease;
+}
+.button3 span div:nth-child(5)::after {
+    transition: all 1s ease;
+    content: 'i';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #fd1fbd;
+    z-index: -1;
+}
+.button3 span div:nth-child(5)::before {
+    transition: all 1.5s ease;
+    content: 'i';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #76ebf4;
+    z-index: -2;
+}
+.button3 span div:nth-child(6) {
+    transition: all 2s ease;
+}
+.button3 span div:nth-child(6)::after {
+    transition: all 1s ease;
+    content: 'n';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #fd1fbd;
+    z-index: -1;
+}
+.button3 span div:nth-child(6)::before {
+    transition: all 1.5s ease;
+    content: 'n';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #76ebf4;
+    z-index: -2;
+}
+
+.button3 span div:nth-child(7) {
+    transition: all 2s ease;
+}
+.button3 span div:nth-child(7)::after {
+    transition: all 1s ease;
+    content: 'g';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #fd1fbd;
+    z-index: -1;
+}
+.button3 span div:nth-child(7)::before {
+    transition: all 1.5s ease;
+    content: 'g';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #76ebf4;
+    z-index: -2;
+}
+.button3 span div:nth-child(8) {
+    transition: all 2s ease;
+}
+.button3 span div:nth-child(8)::after {
+    transition: all 1s ease;
+    content: 's';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #fd1fbd;
+    z-index: -1;
+}
+.button3 span div:nth-child(8)::before {
+    transition: all 1.5s ease;
+    content: 's';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #76ebf4;
+    z-index: -2;
+}
+.button3 span:hover div::after {
+    transform: rotateX(-1080deg);
+    opacity: 1;
+    transform: scale(1.2);
+}
+.button3 span:hover div::before {
+    transform: rotateX(-1440deg);
+    opacity: 1;
+    transform: scale(1.5);
+}
+.button3 span:hover div {
+    transform: rotateX(-1800deg);
+    margin-left: 8px;
+}
+
+.button4 img{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    
+}
+
+
+.button4 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c794209a-4372-48c7-9202-95e7269a3159/da50129-2e5ab58c-4232-4893-8071-e2933d25e01f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvYzc5NDIwOWEtNDM3Mi00OGM3LTkyMDItOTVlNzI2OWEzMTU5XC9kYTUwMTI5LTJlNWFiNThjLTQyMzItNDg5My04MDcxLWUyOTMzZDI1ZTAxZi5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.19o-boRiWLVrxuTvG868BsmLPZYkLGChFdcBIwC9jTw) center center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: block;
+}
+.button4 span {
+    white-space: nowrap;
+    transition: all 2s ease;
+    overflow: hidden;
+    font-size: 82px;
+    font-weight: 800;
+    font-family: sans-serif;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.button4 span div {
+    display: inline-block;
+    position: relative;
+}
+.button4 span div:nth-child(1) {
+    transition: all 2s ease;
+}
+.button4 span div:nth-child(1)::after {
+    transition: all 1s ease;
+    content: 'P';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #fd1fbd;
+    z-index: -1;
+}
+.button4 span div:nth-child(1)::before {
+    transition: all 1.5s ease;
+    content: 'P';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #76ebf4;
+    z-index: -2;
+}
+.button4 span div:nth-child(2) {
+    transition: all 2s ease;
+}
+.button4 span div:nth-child(2)::after {
+    transition: all 1s ease;
+    content: 'r';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #fd1fbd;
+    z-index: -1;
+}
+.button4 span div:nth-child(2)::before {
+    transition: all 1.5s ease;
+    content: 'r';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #76ebf4;
+    z-index: -2;
+}
+.button4 span div:nth-child(3) {
+    transition: all 2s ease;
+}
+.button4 span div:nth-child(3)::after {
+    transition: all 1s ease;
+    content: 'o';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #fd1fbd;
+    z-index: -1;
+}
+.button4 span div:nth-child(3)::before {
+    transition: all 1.5s ease;
+    content: 'o';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #76ebf4;
+    z-index: -2;
+}
+.button4 span div:nth-child(4) {
+    transition: all 2s ease;
+}
+.button4 span div:nth-child(4)::after {
+    transition: all 1s ease;
+    content: 'f';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #fd1fbd;
+    z-index: -1;
+}
+.button4 span div:nth-child(4)::before {
+    transition: all 1.5s ease;
+    content: 'f';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #76ebf4;
+    z-index: -2;
+}
+.button4 span div:nth-child(5) {
+    transition: all 2s ease;
+}
+.button4 span div:nth-child(5)::after {
+    transition: all 1s ease;
+    content: 'i';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #fd1fbd;
+    z-index: -1;
+}
+.button4 span div:nth-child(5)::before {
+    transition: all 1.5s ease;
+    content: 'i';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #76ebf4;
+    z-index: -2;
+}
+.button4 span div:nth-child(6) {
+    transition: all 2s ease;
+}
+.button4 span div:nth-child(6)::after {
+    transition: all 1s ease;
+    content: 'l';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #fd1fbd;
+    z-index: -1;
+}
+.button4 span div:nth-child(6)::before {
+    transition: all 1.5s ease;
+    content: 'l';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #76ebf4;
+    z-index: -2;
+}
+
+.button4 span div:nth-child(7) {
+    transition: all 2s ease;
+}
+.button4 span div:nth-child(7)::after {
+    transition: all 1s ease;
+    content: 'e';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #fd1fbd;
+    z-index: -1;
+}
+.button4 span div:nth-child(7)::before {
+    transition: all 1.5s ease;
+    content: 'e';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotateX(0deg);
+    color: #76ebf4;
+    z-index: -2;
+}
+
+.button4 span:hover div::after {
+    transform: rotateX(-1080deg);
+    opacity: 1;
+    transform: scale(1.2);
+}
+.button4 span:hover div::before {
+    transform: rotateX(-1440deg);
+    opacity: 1;
+    transform: scale(1.5);
+}
+.button4 span:hover div {
+    transform: rotateX(-1800deg);
+    margin-left: 8px;
+}
+
+.button5 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background: url(https://www.bleepstatic.com/content/posts/2019/07/31/ClubPenguinRewritten.jpg) center center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: block;
+}
+
+.button5 span {
+    transition: all 0.6s ease;
+    overflow: hidden;
+    font-size: 62px;
+    font-weight: 800;
+    font-family: sans-serif;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.button5 span::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -50px;
+    left: -60px;
+    width: 90px;
+    height: 90px;
+    background: #000;
+    z-index: -1;
+    box-shadow: 0px 0px 120px #024768, 0px 0px 120px #04b0bc, 0px 0px 120px #33c9c7, 0px 0px 120px #94dfdd, 0px 0px 120px #97d3d3;
+    transition: all 0.3s ease;
+    transform: rotate(-45deg);
+}
+.button5 span:hover::after {
+    box-shadow: 40px -20px 0px #024768, 41px -20px 8px rgba(0, 0, 0, 0.3), 80px 20px 0px #04b0bc, 81px 20px 8px rgba(0, 0, 0, 0.3), 120px 60px 0px #22cbcb, 121px 60px 8px rgba(0, 0, 0, 0.3), 160px 100px 0px #94dfdd, 161px 100px 8px rgba(0, 0, 0, 0.3), 200px 120px 0px #97d3d3;
+}
+.button5 span:hover {
+    box-shadow: 4px 34px 24px rgba(0, 0, 0, 0.3);
+}
+
+

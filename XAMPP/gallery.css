@@ -9,7 +9,7 @@
     
 }  */
 
-.game-title{
+/* .game-title{
     width: 70px;
     height: 70px;
     position:absolute;
@@ -19,15 +19,14 @@
 }
 
 .main-body h1{
-    padding-left: 20%;
-    padding-top: 20px;
-    font-size: 50px;
-
+    padding-left: 40%;
+    padding-top: 10px;
+    font-size: 70px;
 }
 
 .main-body h3{
     padding-left: 1%;
-    padding-top: 30px;
+    padding-top: 10px;
     font-size: 30px;
 } 
 
@@ -36,24 +35,67 @@
     height: 50px;
     position:absolute;
     top:20px;
-    right:0%;
+    right:0px;
     display: flex;
     justify-content: space-around;
     cursor:pointer;
+    
+} */
+
+
+.head img:first-child{
+    width: 20%;
+    height: 25%;
+    position:absolute;
+    left: 5px;
+    top:10px;
+    transform: rotate(-10deg);
 }
 
-.character{
-
-    width: 180px;
-    height: 38%;
+.head img:nth-child(2){
+    width: 5%;
+    height: 10%;
     position:absolute;
-    top:8px;
+    top:20px;
+    right:3%; 
+    cursor:pointer;
+} 
+
+ .head h1{
+    padding-left: 27%;
+    padding-top: 0px;
+    font-size: 100px;
+    border-radius: 10px 100px / 120px;
+    background-image:linear-gradient(
+        to bottom,
+        transparent,
+        transparent 10%,
+        rgba(22,22,22,0.5)
+    ), url("img/bk7.png");
+    box-shadow: 2px 2px 16px 1px #aaa;
+    overflow: hidden;
+    font-weight:bold;
+}
+
+.head h3{
+    padding-left: 1%;
+    padding-top: 0px;
+    font-size: 30px;
+
+}
+
+.head img:nth-child(3){
+
+    width: 250px;
+    height: 350px;
+    position:absolute;
+    top:5px;
     right:10%;
     display: flex;
     justify-content: space-around;
     cursor:pointer;
     -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
+    transform: scaleX(-1);
 
 
 }
