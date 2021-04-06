@@ -1,2 +1,0 @@
-# LeHS
-Proiect Ip
