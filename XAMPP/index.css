@@ -1,0 +1,253 @@
+ *{
+    /* border: 0; */
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif;
+}
+
+/*
+ header{
+    background-color:black;
+    width: 100vw;
+    height: 2em;
+} 
+h3{
+    color: burlywood;
+}
+
+.main{
+     background-image: url('fantasy.jpg'); 
+    /* opacity: 0.5;*/
+    /* border: 5px solid black; */
+     /* height: 100vh;
+    width: 100vw;  
+    position: relative;
+}
+.account{
+    background-color: antiquewhite;
+    position: absolute;
+    right:10em;
+    top:10em;
+    border: 3px black solid;
+    padding: 1em;
+}
+img{
+     height:100vh;
+     width: 100vw;
+}
+#email,#password{
+    display: block;
+    background-color:#ecc393;
+    color:burlywood;
+    
+    margin-left:1em;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    height: 2.5em;
+    width: 25em;
+}
+p{
+    margin-left: 1em;
+}
+
+.button{
+
+  position: relative;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  display: inline-block;
+}
+
+.button1 {
+    position: relative;
+    background-color: #4CAF50;} */ 
+
+
+.hero{
+    height:100%;
+    width:100%;
+     background-image: linear-gradient(rgba(0, 0, 0, 0.13),rgba(0, 12, 6, 0.158)),url(img/thumbs/island12.png);
+    background-position: center;
+    background-size: cover;
+    position:absolute;
+    
+}
+
+.characters {
+
+    width:2px;
+    cursor:pointer;
+    height: 1px;  
+    position:relative ;
+    top:90px;
+    left:100px;
+
+}
+
+.game-title{
+
+    width: 70px;
+    height: 70px;
+    position:absolute;
+    left: 5px;
+    top:10px;
+    transform: rotate(-10deg);
+    
+}
+
+.btn-icons{
+    width: 180px;
+    height: 50px;
+    position:absolute;
+    top:20px;
+    right:50px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.btn-icons img{
+
+    width:50px;
+    margin:0 12px;
+    box-shadow: 0 0 20px 0 #1055833d;
+    cursor:pointer;
+    border-radius: 50%; 
+}
+
+
+
+
+ /* .btn-icons img{
+
+    top:20px;
+    width:10px;
+    cursor:pointer;
+    /*border-radius: 50%; 
+   
+    
+}  */
+
+
+.form-box{
+    
+    width: 390px;
+    height:480px; 
+    position:relative;
+    margin:6% auto;
+    left:220px;
+    background:#fff;
+    padding:6px;
+    overflow: hidden;
+    border-radius: 5vw;
+    
+    
+}
+
+
+    
+
+.button-box{
+    width:220px;
+    margin:35px;
+    position:relative;
+    box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+    left: 50px;
+}
+
+.toggle-btn{
+    padding:10px 30px;
+    cursor:pointer;
+    background:transparent;
+    border:0;
+    outline:none;
+    position:relative;
+}
+
+#btn{
+    top:0;
+    left:0;
+    position:absolute;
+    width:110px;
+    height:100%;
+    background:linear-gradient(to right,#3344FF,#0DCC4C/*#ff105f,#ffad06*/);
+    border-radius: 30px;
+    transition:.5s;
+
+}
+
+.social-icons{
+    margin:30px auto;
+    text-align: center; 
+    display: block;
+}
+
+.social-icons img{
+    width:40px;
+    margin:0 12px;
+    box-shadow: 0 0 20px 0 #1055833d;
+    cursor:pointer;
+    border-radius: 50%; 
+}
+
+.input-group{
+    top:180px;
+    position:absolute;
+    width:300px;
+    transition:.5s;
+    
+}
+
+.input-field{
+    width:100%;
+    padding:10px 0;
+    margin:5px 0;
+    border-left:0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline:none;
+    background:transparent'
+}
+
+.submit-btn{
+    width:85%;
+    padding:10px 30px;
+    cursor:pointer;
+    display:block;
+    margin:auto;
+    background:linear-gradient(to right,#3344FF,#0DCC4C/*#ff105f,#ffad06*/);
+    border: 0;
+    outline:none;
+    border-radius: 30px;
+}
+
+.check-box{
+    margin:30px 10px 30px 0;
+}
+
+span{
+     color:#777;
+    font-size:12px;
+    bottom:68px;
+    position:absolute; 
+
+}
+
+#login{
+    left:50px;
+}
+
+#register{
+
+    left:450px;
+}
+
+
