@@ -2,25 +2,55 @@ body{
   margin:0;
   padding:0;
   padding:0;
+  background-image :linear-gradient(rgba(0, 0, 0, 0.13),rgba(0, 12, 6, 0.158)),url(https://cdnb.artstation.com/p/assets/images/images/004/390/815/large/rachel-eady-the-wilds-room-2.jpg?1483343041);
+  background-size: cover;
 }
 
+
+.game-title{
+  width: 70px;
+  height: 70px;
+  position:absolute;
+  left: 5px;
+  top:10px;
+  transform: rotate(-10deg);
+}
+
+.exit-btn{
+  width: 10%;
+  height: 8%;
+  position:absolute;
+  top:20px;
+  right:0px;
+  display: flex;
+  justify-content: space-around;
+  cursor:pointer;  
+}
+
+h1{
+ font-size:500%;
+}
 
 .cards{
   display: flex;
   justify-content: center;
-  background-image :url("img/island11.png");
   padding-bottom:5%;
+  padding-top:7%;
+  flex-wrap: wrap;
  
 }
 
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    width: 390px;
-    margin-left: 0%;
+    width: 30%;
+    height:20%;
+    margin-left: 2%;
     margin-top:3%;
     text-align: center;
-    background-color:honeydew ;
+    background-image:linear-gradient(#AED6F1  ,#1E8449, #AED6F1 );
+    box-shadow: 2px 2px 16px 1px #aaa;
+  
   }
   
   .title {
@@ -57,7 +87,7 @@ body{
 
   h1{
     padding-left:2%;
-    font-size:50px;
+    font-size:250%;
   }
 
   .card1 {
@@ -66,7 +96,9 @@ body{
     margin-left: 5%;
     margin-top:3%;
     text-align: left;
-    background-color:honeydew ;
+    background-image:linear-gradient(#A9DFBF,#85C1E9 ,#1E8449);
+    border-radius: 10%;
+    box-shadow: 2px 2px 16px 1px #aaa;
   }
   
   .title1 {
@@ -86,15 +118,17 @@ body{
 
 
 .rings{
-  padding-left:40%;
+  padding-left:0%;
   padding-top:0%;
-}  
+  padding-left: 40%;
+ 
+} 
 
 
 .percent1, svg, circle {
     width: 200px;
     height: 200px;
-    
+       
 }
 
 circle {
@@ -107,7 +141,7 @@ circle {
 }
 
 .percent1 circle:nth-child(2) {
-  stroke: gold;
+  stroke: green;
   animation: percent 1.5s linear;
   animation-delay: 1s;
 }
@@ -122,7 +156,7 @@ circle {
 
 .percent1 circle:nth-child(2) {
   stroke-dashoffset: calc(440 - (440 * 75) / 100); /* Here's what's changed */
-  stroke: gold;
+  stroke: green;
   animation: percent 1.5s linear;
   animation-delay: 1s;
 }
@@ -131,7 +165,7 @@ circle {
   position: relative;
   bottom: 190px;
   right: -50px;
-  color:gold;
+  color:green;
 }
 
 .head h1 {
@@ -145,7 +179,7 @@ span {
 }
 
 .percent1 span {
-  color: gold;
+  color: green;
 }
 
 
@@ -374,6 +408,35 @@ span {
        -moz-linear-gradient( left, #09c, #690);
   }
   
+
+  @media  screen and (max-width:950px) {
+
+    .cards{
+        justify-content: space-around;
+    }
+    
+     .card{
+         width:50%;
+     }
+    
+     .card1{
+         width:100%;
+    
+     }
+    
+        
+    }
+    
+    @media  screen and (max-width:600px) {
+        
+        .card1{
+            width:100%;
+       
+        }
+       
+           
+       }
+    
   
 
   

@@ -1,15 +1,18 @@
  .main-body{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.13),rgba(0, 12, 6, 0.158)), url("img/bk8.jpg");
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.13),rgba(0, 12, 6, 0.158)), url("img/bk8.jpg"); */
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.13),rgba(0, 12, 6, 0.158)),url(https://static.wikia.nocookie.net/club-penguin-rewritten/images/a/ac/Dock_2020.png/revision/latest?cb=20200103030722);
+
     display:block;
  }
  
-/* .wrapper-gallery {
-    
-    padding-top: 100px;
-    
-}  */
+ .wrapper-gallery{
+    display: flex;
+    flex-wrap: wrap;
+ }
 
-/* .game-title{
+
+.game-title{
     width: 70px;
     height: 70px;
     position:absolute;
@@ -18,10 +21,22 @@
     transform: rotate(-10deg);
 }
 
+
 .main-body h1{
-    padding-left: 40%;
+    padding-left: 22%;
     padding-top: 10px;
-    font-size: 70px;
+    font-size:450%;
+    border-radius: 10px 100px / 120px;
+    background-image:linear-gradient(
+        to bottom,
+        transparent,
+        transparent 10%,
+        rgba(22,22,22,0.5)
+    ), url(https://www.pinclipart.com/picdir/big/7-73700_clip-art-freeuse-download-blue-download-fluffy-free.png);
+    box-shadow: 2px 2px 16px 1px #aaa;
+    overflow: hidden;
+    font-weight:bold;
+    color:limegreen;
 }
 
 .main-body h3{
@@ -31,74 +46,32 @@
 } 
 
 .exit-btn{
-    width: 180px;
-    height: 50px;
+    width: 10%;
+    height: 8%;
     position:absolute;
     top:20px;
     right:0px;
     display: flex;
     justify-content: space-around;
-    cursor:pointer;
-    
-} */
-
-
-.head img:first-child{
-    width: 20%;
-    height: 25%;
-    position:absolute;
-    left: 5px;
-    top:10px;
-    transform: rotate(-10deg);
+    cursor:pointer;  
 }
 
-.head img:nth-child(2){
-    width: 5%;
-    height: 10%;
+.character{
+
+    width: 180px;
+    height: 300px;
     position:absolute;
-    top:20px;
-    right:3%; 
-    cursor:pointer;
-} 
-
- .head h1{
-    padding-left: 27%;
-    padding-top: 0px;
-    font-size: 100px;
-    border-radius: 10px 100px / 120px;
-    background-image:linear-gradient(
-        to bottom,
-        transparent,
-        transparent 10%,
-        rgba(22,22,22,0.5)
-    ), url("img/bk7.png");
-    box-shadow: 2px 2px 16px 1px #aaa;
-    overflow: hidden;
-    font-weight:bold;
-}
-
-.head h3{
-    padding-left: 1%;
-    padding-top: 0px;
-    font-size: 30px;
-
-}
-
-.head img:nth-child(3){
-
-    width: 250px;
-    height: 350px;
-    position:absolute;
-    top:5px;
+    top:8px;
     right:10%;
     display: flex;
     justify-content: space-around;
     cursor:pointer;
     -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
+   transform: scaleX(-1);
 
 
 }
+
 
 
 #index-gallery{
@@ -239,7 +212,7 @@
     font-family:Arial, Helvetica, sans-serif;
     color:#ffffff;
     text-transform:uppercase;
-    /*right:200px;*/
+    right:200px;
 }
 
 .img-btn-next:hover{
@@ -257,9 +230,37 @@
     font-family:Arial, Helvetica, sans-serif;
     color:#ffffff;
     text-transform:uppercase;
-   /* left:200px;*/
+    left:200px;
 }
 
 .img-btn-prev:hover{
     opacity:0.8;
 }
+
+@media  screen and (max-width:950px) {
+
+.wrapper-gallery{
+    justify-content: space-between;
+}
+
+ .gallery-img{
+     width:45%;
+ }
+
+ .gallery-img:last-child{
+     width:100%;
+
+ }
+
+    
+}
+
+@media  screen and (max-width:600px) {
+    
+    .gallery-img:last-child{
+        width:100%;
+   
+    }
+   
+       
+   }

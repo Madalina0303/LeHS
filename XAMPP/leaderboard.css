@@ -4,13 +4,17 @@
     box-sizing:border-box;
 }
 
+
 .board{
-    background-image: url("img/bk8.jpg");
-   
+    
+    background: linear-gradient(rgba(0, 0, 0, 0.13),rgba(0, 12, 6, 0.158)),url(https://clubpenguinmountains.com/wp-content/uploads/2020/01/pufflewilds.jpg?w=662);
+    background-size: cover;
+
 }
 
 
-.head img:first-child{
+
+.game-title img{
     width: 20%;
     height: 25%;
     position:absolute;
@@ -19,27 +23,30 @@
     transform: rotate(-10deg);
 }
 
-.head img{
-    /* width: 10px;
-    height: 5px; */
-    /* position:absolute;
-    top:20%;*/
-    right:3%; 
-    /* display: flex; */
-    /* justify-content: space-around; */
-    cursor:pointer;
-    width: 5%;
-    height: 10%;
-    position:absolute;
-    /* left: 5px; */
-    top:20px;
-} 
 
- .head h1{
+.head h1{
     padding-left: 30%;
-    padding-top: 0px;
-    font-size: 100px;
+    padding-top: 10px;
+    font-size:550%;
+    color:#ff7500;
+    font-weight: bold;
+
 }
+
+
+.exit-btn img{
+    width: 70px;
+    height: 9%;
+    position:absolute;
+    top:20px;
+    right:1%;
+    display: flex;
+    justify-content: space-around;
+    cursor:pointer;
+    
+}
+
+
 
 
 .leaderboard{
@@ -52,7 +59,6 @@
     align-content: space-between;
     margin-top:200px;
     
-  
 }
 
 a {
