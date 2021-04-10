@@ -106,54 +106,54 @@
 
 #index-gallery .img1{
     grid-area: img1;
-    background-image:url("img/thumbs/island1.jpg");
+    background-image:url("../../public/img/thumbs/island1.jpg");
 }
 
 #index-gallery .img2{
     grid-area:img2;
-    background-image:url("img/thumbs/island2.jpg");
+    background-image:url("../../public/img/thumbs/island2.jpg");
 }
 
 #index-gallery .img3{
     grid-area:img3;
-    background-image:url("img/thumbs/island3.jpg");
+    background-image:url("../../public/img/thumbs/island3.jpg");
     height:610px;
 }
 
 #index-gallery .img4{
     grid-area:img4;
-    background-image:url("img/thumbs/island4.jpg");
+    background-image:url("../../public/img/thumbs/island4.jpg");
 }
 
 #index-gallery .img5{
     grid-area:img5;
-    background-image:url("img/thumbs/island5.jpg");
+    background-image:url("../../public/img/thumbs/island5.jpg");
     height:610px;
 }
 
 #index-gallery .img6{
     grid-area:img6;
-    background-image:url("img/thumbs/island7.jpg");
+    background-image:url("../../public/img/thumbs/island7.jpg");
 }
 
 #index-gallery .img7{
     grid-area:img7;
-    background-image:url("img/thumbs/beach1.jpg");
+    background-image:url("../../public/img/thumbs/beach1.jpg");
 }
 
 #index-gallery .img8{
     grid-area:img8;
-    background-image:url("img/thumbs/fantasy.jpg");
+    background-image:url("../../public/img/thumbs/fantasy.jpg");
 }
 
 #index-gallery .img9{
     grid-area:img9;
-    background-image:url("img/thumbs/island.jpg");
+    background-image:url("../../public/img/thumbs/island.jpg");
 }
 
 #index-gallery .img10{
     grid-area:img10;
-    background-image:url("img/thumbs/purple.jpg");
+    background-image:url("../../public/img/thumbs/purple.jpg");
 }
 
 .gallery-img div{

@@ -21,7 +21,7 @@ if(galleryImages){
 
             let newImg = document.createElement("img");
             newImgWindow.appendChild(newImg);
-            newImg.setAttribute("src","img/"+ setNewImgUrl);
+            newImg.setAttribute("src","../../public/img/"+ setNewImgUrl);
             newImg.setAttribute("id","current-img");
 
             newImg.onload = function(){
@@ -81,7 +81,7 @@ function changeImg(changeDir){
         }
     }
 
-    newImg.setAttribute("src", "img/img" + calcNewImg + ".jpg");
+    newImg.setAttribute("src", "../../public/img/img" + calcNewImg + ".jpg");
     newImg.setAttribute("id", "current-img");
 
     getLatestOpenedImg = calcNewImg;
