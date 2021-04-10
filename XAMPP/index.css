@@ -1,72 +1,9 @@
  *{
-    /* border: 0; */
     margin: 0;
     padding: 0;
     font-family:sans-serif;
 }
 
-/*
- header{
-    background-color:black;
-    width: 100vw;
-    height: 2em;
-} 
-h3{
-    color: burlywood;
-}
-
-.main{
-     background-image: url('fantasy.jpg'); 
-    /* opacity: 0.5;*/
-    /* border: 5px solid black; */
-     /* height: 100vh;
-    width: 100vw;  
-    position: relative;
-}
-.account{
-    background-color: antiquewhite;
-    position: absolute;
-    right:10em;
-    top:10em;
-    border: 3px black solid;
-    padding: 1em;
-}
-img{
-     height:100vh;
-     width: 100vw;
-}
-#email,#password{
-    display: block;
-    background-color:#ecc393;
-    color:burlywood;
-    
-    margin-left:1em;
-    margin-bottom: 1em;
-    margin-right: 1em;
-    height: 2.5em;
-    width: 25em;
-}
-p{
-    margin-left: 1em;
-}
-
-.button{
-
-  position: relative;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  display: inline-block;
-}
-
-.button1 {
-    position: relative;
-    background-color: #4CAF50;} */ 
 
 
 .hero{
@@ -75,15 +12,12 @@ p{
      background-image: linear-gradient(rgba(0, 0, 0, 0.13),rgba(0, 12, 6, 0.158)),url(img/thumbs/island12.png);
     background-position: center;
     background-size: cover;
-    position:absolute;
+    position:fixed;
     
 }
 
 .characters {
 
-    width:2px;
-    cursor:pointer;
-    height: 1px;  
     position:relative ;
     top:90px;
     left:100px;
@@ -121,33 +55,24 @@ p{
     border-radius: 50%; 
 }
 
-
-
-
- /* .btn-icons img{
-
-    top:20px;
-    width:10px;
-    cursor:pointer;
-    /*border-radius: 50%; 
-   
-    
-}  */
-
+.wrapper{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
 
 .form-box{
     
     width: 390px;
     height:480px; 
     position:relative;
-    margin:6% auto;
-    left:220px;
     background:#fff;
     padding:6px;
     overflow: hidden;
     border-radius: 5vw;
-    
-    
+    margin-top:8%;
+    margin-left:15%;
+       
 }
 
 
@@ -177,7 +102,7 @@ p{
     position:absolute;
     width:110px;
     height:100%;
-    background:linear-gradient(to right,#3344FF,#0DCC4C/*#ff105f,#ffad06*/);
+    background:linear-gradient(to right,#3344FF,#0DCC4C);
     border-radius: 30px;
     transition:.5s;
 
@@ -190,7 +115,7 @@ p{
 }
 
 .social-icons img{
-    width:40px;
+    width: 40px;
     margin:0 12px;
     box-shadow: 0 0 20px 0 #1055833d;
     cursor:pointer;
@@ -214,7 +139,7 @@ p{
     border-right: 0;
     border-bottom: 1px solid #999;
     outline:none;
-    background:transparent'
+    background:transparent;
 }
 
 .submit-btn{
@@ -223,7 +148,7 @@ p{
     cursor:pointer;
     display:block;
     margin:auto;
-    background:linear-gradient(to right,#3344FF,#0DCC4C/*#ff105f,#ffad06*/);
+    background:linear-gradient(to right,#3344FF,#0DCC4C);
     border: 0;
     outline:none;
     border-radius: 30px;
@@ -237,7 +162,6 @@ span{
      color:#777;
     font-size:12px;
     bottom:68px;
-    position:absolute; 
 
 }
 
@@ -249,5 +173,63 @@ span{
 
     left:450px;
 }
+
+
+@media  screen and (max-width:1175px) {
+
+    .form-box{
+        margin-bottom:50%;
+        margin-left:25%;
+    }
+
+    .characters{
+        display: none;
+    }
+    
+    
+        
+ }
+
+@media  screen and (max-width:1090px) {
+
+    .form-box{
+        margin-top:5em;
+    }
+    
+        
+    }
+    
+    @media  screen and (max-width:550px) {
+
+        .characters img{
+            width:80%;
+            
+        }
+
+        .form-box{
+            width:290px;
+            text-align: center;
+        }
+        
+        .button-box {
+            margin-left:0px;
+        }
+
+        .input-group{
+            width:200px;
+        }
+
+        .span{
+            position:inherit;
+            margin-right: 50%;
+        }
+
+        .check-box{
+            margin-left:0px;
+        }
+      
+           
+    }
+
 
 

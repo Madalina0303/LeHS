@@ -1,0 +1,135 @@
+body{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.13),rgba(0, 12, 6, 0.158)),url(https://static.wikia.nocookie.net/club-penguin-rewritten/images/a/ac/Dock_2020.png/revision/latest?cb=20200103030722);
+
+}
+
+
+.game-title img{
+    width: 300px;
+    height: 25%;
+    position:absolute;
+    left: 5px;
+    top:10px;
+    transform: rotate(-10deg);
+}
+
+
+.head h1{
+    padding-left: 25%;
+    padding-top: 5px;
+    font-size:550%;
+    /* color:blue; */
+    font-weight: bold;
+
+}
+
+
+.exit-btn img{
+    width:60px;
+    height: 9%;
+    position:absolute;
+    top:20px;
+    right:3%;
+    display: flex;
+    justify-content: space-around;
+    cursor:pointer;
+    position:fixed;
+}
+
+.btns{
+    text-align: center;
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+}
+
+.btn {
+
+    width:31%;
+    font-size: 250%;
+    cursor: pointer;
+    display: inline-block;
+    padding: 30px;
+    background: #94a657;
+    background-size: cover;
+    border-radius: 4px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 20px;
+    margin-left:35%;
+
+}
+.btn:after {
+    /* content: ''; */
+    display: inline-block;
+    color: #94a657;
+    background: #fff;
+    font-family: 'FontAwesome';
+    padding: 3px;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin-left: 8px;
+    padding-left: 4.5px;
+    padding-right: 1.5px;
+}
+.btn.playing:after {
+    padding: 3px;
+    /* content: ''; */
+}
+
+
+.social{
+    
+    margin-top:10%;
+    text-align: center;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+
+  
+  .button_lang {
+    background-color: #444;
+    color: #FFF;
+    padding: 30px 60px;
+    border-radius: 5px;
+    font-size: 300%;
+    
+    -webkit-transition: background-color .3s ease-in-out;
+    -moz-transition: background-color .3s ease-in-out;
+    -o-transition: background-color .3s ease-in-out;
+    -ms-transition: background-color .3s ease-in-out;
+    transition: background-color .3s ease-in-out;
+  }
+
+  .button_lang:hover, .current_lang {
+    background-color: #777; 
+    -webkit-transition: background-color .3s ease-in-out;
+    -moz-transition: background-color .3s ease-in-out;
+    -o-transition: background-color .3s ease-in-out;
+    -ms-transition: background-color .3s ease-in-out;
+    transition: background-color .3s ease-in-out;
+  }
+
+.button_lang{
+     top:300px;
+
+  }
+
+  ul li {
+    width: auto;
+    display: inline;
+  }
+
+
+  @media  screen and (max-width:600px) {
+
+    #fr_click{
+        margin-bottom: 40px;
+    }
+    
+        
+    }
