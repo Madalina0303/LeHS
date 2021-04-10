@@ -1,5 +1,4 @@
  .main-body{
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.13),rgba(0, 12, 6, 0.158)), url("img/bk8.jpg"); */
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.13),rgba(0, 12, 6, 0.158)),url(https://static.wikia.nocookie.net/club-penguin-rewritten/images/a/ac/Dock_2020.png/revision/latest?cb=20200103030722);
 
@@ -212,7 +211,7 @@
     font-family:Arial, Helvetica, sans-serif;
     color:#ffffff;
     text-transform:uppercase;
-    right:200px;
+    right:20px;
 }
 
 .img-btn-next:hover{
@@ -230,7 +229,7 @@
     font-family:Arial, Helvetica, sans-serif;
     color:#ffffff;
     text-transform:uppercase;
-    left:200px;
+    left:20px;
 }
 
 .img-btn-prev:hover{

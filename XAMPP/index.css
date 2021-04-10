@@ -175,6 +175,21 @@ span{
 }
 
 
+@media  screen and (max-width:1175px) {
+
+    .form-box{
+        margin-bottom:50%;
+        margin-left:25%;
+    }
+
+    .characters{
+        display: none;
+    }
+    
+    
+        
+ }
+
 @media  screen and (max-width:1090px) {
 
     .form-box{
