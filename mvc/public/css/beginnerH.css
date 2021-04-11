@@ -101,6 +101,17 @@ background-size: cover;
     border-radius: 5%;
     font-size: 15px;
 }
+.next{
+    background-color:#3863a0;
+    color:rgb(213, 219, 206);
+    width: 6em;
+    border: none;
+    border-radius: 5%;
+    font-size: 15px;
+    position: absolute;
+    right: 8em;
+    bottom: 0.5em;
+}
 .rezultat{
     /* width: 40vw;
     height: 40em;
@@ -120,3 +131,24 @@ background-size: cover;
     }
     
 }
+.lnk{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top:4%;
+    right: 2%;
+    width:10em;
+  }
+  .btnn img{
+    height: 30px;
+    width: 30px;
+   
+  }
+
+  .btnn{
+      border: none;
+    border-radius: 40%;
+    background:orange;
+     
+  }
