@@ -1,6 +1,8 @@
 body{
-    background-image: url("../../public/images/lemn.jpg");
-    
+    /* background-image: url("../../public/images/merge.png");
+     */
+    /* background-color: #f2f2f2;; */
+    background-image: url("../../public/images/htr.jpg");
     min-height: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -33,11 +35,13 @@ body{
      height: 7em; 
      width: 15em;
      margin-top: 2em;
-     background-color: rgba(210, 105, 30, 0.233);
+     /* background-color: rgba(210, 105, 30, 0.233); */
+     background-color: rgba(204, 200, 195, 0.356);
   }
   .hi p{
       padding: 1em;
-      color:rgb(208, 219, 215);
+      /* color:rgb(208, 219, 215); */
+      color: #52dd36;
   }
   header{
       display: flex;
@@ -55,6 +59,7 @@ body{
 .cod,.cod1,.cod2,.cod3{
     height: 20em;
     background-color:  rgb(235, 139, 30);
+   
     width: 40vw;
     position: relative;
     margin: 1em;
@@ -95,12 +100,23 @@ body{
     bottom: 0.5em;
     /* background-color:rgb(213, 219, 236);  */
     /* background-color: #FFFFFF4D; */
-    background-color:#52dd36;;
-    color:rgb(231, 233, 238);;
+    background-color:#52dd36;
+    color:rgb(231, 233, 238);
     width: 6em;
     border: none;
     border-radius: 5%;
     font-size: 15px;
+}
+.next{
+    background-color:#52dd36;
+    color:rgb(213, 219, 206);
+    width: 6em;
+    border: none;
+    border-radius: 5%;
+    font-size: 15px;
+    position: absolute;
+    right: 8em;
+    bottom: 0.5em;
 }
 .rezultat{
     /* width: 40vw;
@@ -121,3 +137,24 @@ body{
     }
     
 }
+.lnk{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top:4%;
+    right: 2%;
+    width:10em;
+  }
+  .btnn img{
+    height: 30px;
+    width: 30px;
+   
+  }
+
+  .btnn{
+      border: none;
+    border-radius: 40%;
+    background:orange;
+     
+  }
