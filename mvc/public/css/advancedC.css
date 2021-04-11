@@ -1,6 +1,6 @@
 body{
     /* background-color:  #f5f7f9; */
-    background-image: url('../../public/images/ult.png');
+    background-image: url('../../public/images/nori.jpg');
     min-height: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -8,8 +8,8 @@ body{
     background-size: cover;
 }
 .pers{
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     transition: transform .2s;
     margin-top: 0.5em;
   
