@@ -14,6 +14,7 @@
     /* border: solid red 2px; */
     flex-wrap: wrap;
   background-color: #006181;
+ 
 }
 #mapBtn{
   background-color: inherit;
@@ -299,6 +300,7 @@ body{
   } */
  .inc h1{
    font-size: 25px;
+  
  }
 
  
@@ -408,8 +410,9 @@ body{
   left:40%;
   transform: translate(-40%, -40%);
   
-  background: rgba(204, 206, 236, 0.5); 
-  color: rgb(8, 8, 8);
+  background: rgba(241, 241, 243, 0.651); 
+  /* color: rgb(8, 8, 8); */
+  color: #f77078;
   /* width: 100vw;
   height:20em; */
 }
@@ -439,7 +442,8 @@ body{
   position: relative;
   margin-top:0.2em;
   width: 100vw;
-  background: #006181;
+  /* background: #006181; */
+  background-image: url('../../public/images/spring.png');
 
 }
 .footer__text{
