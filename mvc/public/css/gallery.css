@@ -96,14 +96,6 @@
     
 }
 
-/* #index-gallery h1{
-    grid-area:gallery-h1;
-}
-
-#index-gallery h3{
-    grid-area:gallery-h3;
-} */
-
 #index-gallery .img1{
     grid-area: img1;
     background-image:url("../../public/img/thumbs/island1.jpg");

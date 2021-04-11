@@ -204,10 +204,6 @@ span {
   
   /* Styling an indeterminate progress bar */
   
-  /* progress:not(value) {
-    Add your styles here. As part of this walkthrough we will focus only on determinate progress bars. 
-  } */
-  
   /* Styling the determinate progress element */
   
   progress[value] {
@@ -240,14 +236,11 @@ span {
     
     background-size: 35px 20px, 100% 100%, 100% 100%;
     border-radius:3px;
-    
-    /* Let's animate this */
     animation: animate-stripes 5s linear infinite;
   }
   
   @keyframes animate-stripes { 100% { background-position: -100px 0; } }
   
-  /* Let's spice up things little bit by using pseudo elements. */
   
   progress[value]::-webkit-progress-value:after {
     content: '';
@@ -360,7 +353,6 @@ span {
        -webkit-linear-gradient( left, #09c, #690);
   }
   
-  /* Similarly, for Mozillaa. Unfortunately combining the styles for different browsers will break every other browser. Hence, we need a separate block. */
   
   .html5::-moz-progress-bar {
     /* Gradient background with Stripes */

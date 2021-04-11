@@ -75,51 +75,59 @@
                         Sign-Up & Login
                     </a>
                 </li>
+
                 <li>
                     2.2
+                    <a href="#gallery">
+                        Game Gallery
+                    </a>
+                </li>
+
+                <li>
+                    2.3
                     <a href="#menu">
                         Menu
                     </a>
                 </li>
                 <li>
-                    2.3
+                    2.4
                     <a href="#levels">
                         Levels
                     </a>
                     <ul role="#directory">
 
                         <li>
-                            2.3.1
+                            2.4.1
                             <a href="#beginnerHtml">
                                 Beginner-HTML
                             </a>
                         </li>
                         <li>
-                            2.3.2
+                            2.4.2
                             <a href="#intermediateHtml">
                                 Intermediate-HTML
                             </a>
                         </li>
                         <li>
-                            2.3.3
+                            2.4.3
                             <a href="#advancedHtml">
                                 Advanced-HTML
                             </a>
                         </li>
                         <li>
-                            2.3.4
+                            2.4.4
                             <a href="#beginnerCss">
                                 Beginner-CSS
                             </a>
                         </li>
                         <li>
-                            2.3.5
+                            2.4.5
                             <a href="#intermediateCss">
                                 Intermediate-Css
                             </a>
                         </li>
                         <li>
-                            2.3.6
+                            2.4.6
                             <a href="#advancedCss">
                                 Advanced-Css
                             </a>
@@ -128,25 +136,25 @@
                     </ul>
                 </li>
                 <li>
-                    2.4
+                    2.5
                     <a href="#profile">
                         Profile
                     </a>
                 </li>
                 <li>
-                    2.5
+                    2.6
                     <a href="#clasament">
                         Leader Board
                     </a>
                 </li>
                 <li>
-                    2.6
+                    2.7
                     <a href="#settings">
                         Settings
                     </a>
                 </li>
                 <li>
-                    2.7
+                    2.8
                     <a href="#spin">
                         Wheel
                     </a>
@@ -182,12 +190,50 @@
             butonul de sumbit al formularului de inregistrare necesita completarea tuturor campurilor cu date valide.
             Printre functioanalitati se numara memorarea parolei si acceptarea termenilor si conditiilor pentru prelucrarea datelor personale.
             Deasemenea de pe aceasta pagina utilizatorul are acces la galeria jocului.
+
+            <li>
+                Pentru a accesa formularul de register sau login se gliseaza un buton functionalitate obtinuta prin adaugarea de cod js paginii.
+
+                <p>let x = document.getElementById("login");</p>
+                <p>let y = document.getElementById("register");</p>
+                <p>let z = document.getElementById("btn");</p>
+        
+                <p>function register(){</p>
+                    <p> x.style.left="-400px";</p>
+                    <p>  y.style.left="50px";</p>
+                    <p></p> z.style.left="110px";</p>
+                    <p>}</p>
+        
+                <p>function login(){</p>
+                    <p>  x.style.left="50px";</p>
+                    <p>    y.style.left="450px";</p>
+                    <p>  z.style.left="0px";</p>
+                    <p> }</p>
+            </li>
         </p>
+
+        
         <figure typeof="sa:image">
             <img src="../../public/images/form.png">
             <figcaption>Fig.1 -Formular de logare/ inregistrare</figcaption>
         </figure>
     </section>
+
+    <section id="gallery">
+
+        <h3>
+            Game Gallery
+        </h3>
+        <p> Galeria jocului, identificata prin pagina "gallery.html", poate fi accesata de pe pagina principala si pune la dispozitie o serie de imagini
+            ilustrative pentru tematica jocului, creand o perspectiva de ansamblu asupra caracterelor ce vor insoti utilizatorul in experienta traita pe insula. 
+            Utilizatorul poate deschide o imagine ce va fi dispusa pe intregul ecran si poate naviga intre imagini folosindu-se de cele doua butoane prev si next.
+        </p>
+        <figure typeof="sa:image">
+            <img src="../../public/images/gallery.png">
+            <figcaption>Fig.1 -Galeria jocului</figcaption>
+        </figure>
+    </section>
+
     <section id="menu">
         <h3>
             Menu
@@ -298,9 +344,9 @@
         <h3>
             Profile
         </h3>
-        <p> In aceasta pagina, utilizatorul isi poate vedea progresul, nivelul curent si cat mai are de parcurs pana la
-            urmatorul nivel. Este afisata si fotografia utilizatorului, username-ul si optiunea de navigare catre pagina
-            de cadouri/avantaje in joc pentru utilizator.
+        <p> In aceasta pagina, utilizatorul isi poate vedea progresul corespunzator fiecarei categorii de exercitii (Html, Css, All), 
+            nivelul curent si cat mai are de parcurs pana la urmatorul nivel. Este afisata si fotografia utilizatorului, 
+            username-ul si optiunea de navigare catre pagina de cadouri/avantaje in joc pentru utilizator.
         </p>
         <figure typeof="sa:image">
             <img src="../../public/images/profile.png">
@@ -311,7 +357,7 @@
         <h3>
             Leader Board
         </h3>
-        <p> In aceasta pagina, utilizatorul are acces la clasamentul utilizatorilor precum si locul pe care este situat.
+        <p> In aceasta pagina, utilizatorul are acces la clasamentul utilizatorilor precum si locul pe care este situat raportat la ceilalti jucatori.
             Topul jucatorilor este structurat in 3 sectiuni. Acestea din urma find in stransa legatura cu categoriile jocului( Html, Css, All).
         </p>
         <figure typeof="sa:image">
@@ -323,8 +369,43 @@
         <h3>
             Settings
         </h3>
-        <p> Setari cu privire la sunetul de fundal respectiv a suportului pentru internationalizare( limbile: engleza si franceza)
+        <p> Setari cu privire la sunetul de fundal respectiv a suportului pentru internationalizare( limbile: engleza si franceza) pentru a putea fi accesat
+            pe o scara larga de utilizatori. 
             Fondul muzical are ca scop cresterea intesitatii si suspansului, mentinand interesul si atentia utilizatorului.
+
+            <li> Pentru a accesa butonul de sound on/off s-a folosit cod js. 
+            <p>var nyan = document.getElementById('nyan');</p>
+            <p>var nyanBtn = document.getElementById('nyan-btn');</p>
+
+                <p>function playPause(song){</p>
+                    <p>if (song.paused && song.currentTime >= 0 && !song.ended) {</p>
+                        <p>song.play();</p>
+                        <p>} else {</p>
+                            <p> song.pause();</p>
+                            <p>}</p>
+                            <p> }</p>
+
+                            <p> function reset(btn, song){</p>
+                                <p>if(btn.classList.contains('playing')){</p>
+                                    <p> btn.classList.toggle('playing');</p>
+                                    <p> }</p>
+                                    <p>song.pause();</p>
+                                    <p>song.currentTime = 0;</p>
+                                    <p>}</p>
+
+                                    <p>function progress(btn, song){</p>
+                                        <p>setTimeout(function(){</p>
+                                            <p>var end = song.duration; </p>
+                                            <p>var current = song.currentTime;</p>
+                                            <p>var percent = current/(end/100); //check if song is at the end</p>
+                                            <p>if(current==end){</p>
+                                                <p> reset(btn, song);</p>
+                                                <p> }</p>
+                                                <p> btn.style.boxShadow = "inset " + btn.offsetWidth * (percent/100) + "px 0px 0px 0px rgba(0,0,0,0.125)"  </p>
+                                                <p> progress(btn, song);    </p> 
+                                                <p> }, 1000);</p>
+                                                <p> }     </p>  
+            </li>
         </p>
         <figure typeof="sa:image">
             <img src="../../public/images/setari.png">
@@ -337,7 +418,32 @@
         </h3>
         <p> Utilizatorul poate castiga, prin invartirea rotii, bonus de puncte, indicii la exercitii sau avantaje oferite de personajele
             specifice fiecarui nivel. Aceasta functionalitate va fi disponibila o singura data pe zi.
+ 
+        <li>   Pentru a se accesa functionalitatea butonului spin s-a folosit cod js.
+            <p>(function() {</p>
+                <p>const wheel = document.querySelector('.wheel');</p>
+                <p>const startButton = document.querySelector('.button');</p>
+                <p>let deg = 0;</p>
+              
+                <p>startButton.addEventListener('click', () => {</p>
+                    <p> startButton.style.pointerEvents = 'none';</p>
+                    <p> deg = Math.floor(5000 + Math.random() * 5000);</p>
+                    <p> wheel.style.transition = 'all 10s ease-out';</p>
+                    <p> wheel.style.transform = `rotate(${deg}deg)`;</p>
+                    <p> wheel.classList.add('blur');</p>
+                    <p>});</p>
+              
+                    <p>wheel.addEventListener('transitionend', () => {</p>
+                        <p>  wheel.classList.remove('blur');</p>
+                        <p> startButton.style.pointerEvents = 'auto';</p>
+                        <p> wheel.style.transition = 'none';</p>
+                        <p>const actualDeg = deg % 360;</p>
+                        <p>wheel.style.transform = `rotate(${actualDeg}deg)`;</p>
+                        <p>});</p>
+                        <p>})();</p>
 
+            </li>
+            
         </p>
         <figure typeof="sa:image">
             <img src="../../public/images/spin.png">
