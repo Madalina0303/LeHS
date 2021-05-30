@@ -1,3 +1,6 @@
+console.log(level);
+console.log(challenge);
+
 let lock1=document.getElementsByClassName("Verify")[0];
 let lock2=document.getElementsByClassName("Verify")[1];
 let lock3=document.getElementsByClassName("Verify")[2];
@@ -33,17 +36,47 @@ function onClick3(){
   next.addEventListener('click',nextPage);
  }
  function nextPage(){
-  var path=window.location.pathname;
-  var page = path.split("/").pop();
-  console.log( page );
-  if(page=='beginnerH.html')
-   location.href='../views/intermediateH.html';
-  else if(page=='intermediateH.html')
-  location.href='../views/advancedH.html';
-  else if(page=='advancedH.html')
-  location.href='../views/beginnerC.html';
-  else if(page=='beginnerC.html')
-  location.href='../views/intermediateC.html';
-  else if(page=='intermediateC.html')
-  location.href='../views/advancedC.html';
+   // salvare in bd a proiectului mai trebuie facute 
+  // var path=window.location.pathname;
+  // var page = path.split("/").pop();
+  // console.log( page );
+  if(level=='bh'){
+     if(challenge<3){
+     let urmC= parseInt(challenge)+1;
+   location.href='../views/beginnerH.php?level=bh&chlg='.concat(urmC);
+  
+     }
+     else{
+      location.href='../views/beginnerH.php?level=ih&chlg=1';
+     }
+  }
+  if(level=='ih'){
+    if(challenge<3){
+    let urmC=parseInt(challenge)+1;
+  location.href='../views/beginnerH.php?level=ih&chlg='.concat(urmC);
+ 
+    }
+    else{
+     location.href='../views/beginnerH.php?level=ah&chlg=1';
+    }
+ }
+ if(level=='ah'){
+  if(challenge<3){
+  let urmC=parseInt(challenge)+1;
+location.href='../views/beginnerH.php?level=ah&chlg='.concat(urmC);
+
+  }
+  else{
+   location.href='../views/beginnerH.php?level=bh&chlg=1';
+   // + in bd
+  }
+}
+  // else if(page=='intermediateH.html')
+  // location.href='../views/advancedH.html';
+  // else if(page=='advancedH.html')
+  // location.href='../views/beginnerC.html';
+  // else if(page=='beginnerC.html')
+  // location.href='../views/intermediateC.html';
+  // else if(page=='intermediateC.html')
+  // location.href='../views/advancedC.html';
  }

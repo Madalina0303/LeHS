@@ -1,0 +1,49 @@
+{
+
+    "bh":[
+        {
+          "level":"beginnerHtml",
+          "challenge":1,
+          "require":"Se cere sa .. ajutati-l pe mickey sa fac jmk la cutie. Enuntul asta acopera cerintele pt alea 4",
+          "answer1":" ceva raspuns corect",
+          "answer2":" ceva raspuns corect",
+          "answer3":" ceva raspuns corect",
+          "answer4":" ceva raspuns corect",
+          "template1":" efectiv cu input si asa cum va fi pe alea 4 exerc",
+          "template2":" efectiv cu input si asa cum va fi pe alea 4 exerc",
+          "template3":" efectiv cu input si asa cum va fi pe alea 4 exerc",
+          "template4":" efectiv cu input si asa cum va fi pe alea 4 exerc"
+        },
+        {
+            "level":"beginnerHtml",
+            "challenge":2
+        },
+        {
+            "level":"beginnerHtml",
+            "challenge":3
+        }
+    ],
+    "ih":[
+        {
+
+        },
+        {
+
+        },
+        {
+
+        }
+    ],
+    "ah":[
+        {
+
+        },
+        {
+
+        },
+        {
+            
+        }
+    ]
+
+}
