@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +14,7 @@
 
 <body>
 
-    <div class="button" onclick="document.location='levels.html'">
+    <div class="button" onclick="document.location='levels.php'">
         <span>Start Game</span>
 
         
@@ -26,7 +27,7 @@
         <img src="img/gallery-penguin1.png" alt="penguin">
     </div>
 
-    <div class="button4" onclick="javascript:window.location='http://127.0.0.1:5500/mvc/app/views/profile.html'">
+    <div class="button4" onclick="javascript:window.location='http://127.0.0.1:3000/app/views/profile.php'">
         <span><div>P</div><div>r</div><div>o</div><div>f</div><div>i</div><div>l</div><div>e</div></span>
         
     </div>

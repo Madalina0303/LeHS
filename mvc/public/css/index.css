@@ -9,7 +9,9 @@
 .hero{
     height:100%;
     width:100%;
-     background-image: linear-gradient(rgba(0, 0, 0, 0.13),rgba(0, 12, 6, 0.158)),url(../../public/img/thumbs/island12.png);
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.13),rgba(0, 12, 6, 0.158)),url(  "../../public/img/img/Pavaloi.svg");
+    */
+    background-color: rgb(233, 223, 223);
     background-position: center;
     background-size: cover;
     position:fixed;
@@ -19,8 +21,9 @@
 .characters {
 
     position:relative ;
-    top:90px;
+    top:120px;
     left:100px;
+    height:200px;
 
 }
 
@@ -118,7 +121,7 @@
     width: 40px;
     margin:0 12px;
     box-shadow: 0 0 20px 0 #1055833d;
-    cursor:pointer;
+    /* cursor:pointer; */
     border-radius: 50%; 
 }
 
@@ -184,6 +187,7 @@ span{
 
     .characters{
         display: none;
+       
     }
     
     

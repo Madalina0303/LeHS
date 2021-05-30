@@ -26,8 +26,20 @@
 
 <div class="cards">
 <div class="card">
-  <img src="../../public/img/pirate1.png" alt="Penguin pirate" style="width:100%">
-  <h1>Captain Rockhopper</h1>
+  <?php
+
+//    if (($gitUser['$avatar'])){
+//      $poza=$gitUser[$avatar];
+//  echo '<img src=$poza alt="Penguin pirate" style="width:100%">';
+      
+$var=session_start();
+$poza1=$_SESSION['poza'];
+$poza2=substr($poza1,1,strlen($poza1)-2);
+$nume=$_SESSION['nume'];
+?>
+
+<img src="<?php echo $poza2?>" style="width:100%">
+  <h1><?php echo $nume ?></h1>
   <p class="title">Level:4</p>
   <p>HTML Expert</p>
   <p>CSS Intermediar</p>
