@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../public/css/beginnerH.css">
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
     <title>HTML-Beginenenjkbf</title>
 </head>
 
@@ -30,6 +33,7 @@
         <img src="../../public/images/level1.png" alt=" level button" >
     </button>
     </div>
+    <div class="require"></div>
     <div class="exercitiu">
       
       
@@ -37,8 +41,8 @@
             
             <div class="continut">
             
-            <p> &lt;p&gt; Un paragraf &lt;&#47;p&gt; </p>
-            <textarea id="ln1" autofocus></textarea>
+            <!-- <p> &lt;p&gt; Un paragraf &lt;&#47;p&gt; </p>
+            <textarea id="ln1" autofocus></textarea> -->
             </div>
             <button type="submit" class="Verify">Verify>></button>
         </div>
@@ -47,8 +51,8 @@
             
             <div class="continut">
             
-            <p> &lt;p&gt; Un exercitiu ceva &lt;&#47;p&gt; </p>
-            <textarea id="ln2" ></textarea>
+            <!-- <p> &lt;p&gt; Un exercitiu ceva &lt;&#47;p&gt; </p>
+            <textarea id="ln2" ></textarea> -->
             </div>
             <button type="submit" class="Verify">Verify>></button>
         </div>
@@ -57,8 +61,8 @@
             
             <div class="continut">
             
-            <p> &lt;p&gt; Altceva &lt;&#47;p&gt; </p>
-            <textarea id="ln3" ></textarea>
+            <!-- <p> &lt;p&gt; Altceva &lt;&#47;p&gt; </p>
+            <textarea id="ln3" ></textarea> -->
             </div>
             <button type="submit" class="Verify">Verify>></button>
         </div>
@@ -67,8 +71,8 @@
             
             <div class="continut">
             
-            <p> &lt;p&gt; Text text text &lt;&#47;p&gt; </p>
-            <textarea id="ln4"></textarea>
+            <!-- <p> &lt;p&gt; Text text text &lt;&#47;p&gt; </p>
+            <textarea id="ln4"></textarea> -->
             </div>
             <button type="submit" class="Verify">Verify>></button>
             <button type="button" class="next" > Next</button>

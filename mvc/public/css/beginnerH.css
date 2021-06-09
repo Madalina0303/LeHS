@@ -66,8 +66,36 @@ background-size: cover;
     background-color: #3863a0;;
     color:rgb(213, 219, 236);
     /* height: 8%; */
-    width: 80%;
+    width: 150%;
     font-size: 15px;
+}
+#lnmica{
+    background-color: #3863a0;;
+    color:rgb(213, 219, 236);
+    /* height: 8%; */
+    width: 20%;
+    font-size: 15px;
+}
+#lnspec{
+    background-color: #3863a0;;
+    color:rgb(213, 219, 236);
+    /* height: 8%; */
+    width: 50%;
+    font-size: 15px;
+}
+#lnmica_subtire{
+    background-color: #3863a0;;
+    color:rgb(213, 219, 236);
+    height: 5%;
+    width: 30%;
+    font-size: 13px;
+}
+#lnsubtire{
+    background-color: #3863a0;;
+    color:rgb(213, 219, 236);
+    height: 1.5em;
+    width: 30%;
+    /* font-size: 13px; */
 }
 .continut{
   position: absolute;
@@ -77,6 +105,9 @@ background-size: cover;
 .continut p{
     color:rgb(235, 219, 206);
     font-size: 18px;
+}
+.continut h3,h5{
+    color:rgb(235, 219, 206);
 }
 .count{
     position: absolute;

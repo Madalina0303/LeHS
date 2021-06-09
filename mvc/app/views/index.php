@@ -109,7 +109,7 @@
                             
                             $_SESSION['nume'] = $_POST['username-login'];
 
-                            $_SESSION['id'] = $userVerif->getId;
+                            $_SESSION['id'] = "'".$userVerif->getId()."'";
 
                                 header('Location: http://127.0.0.1:3000/app/views/menu.php');
                                 exit; 
