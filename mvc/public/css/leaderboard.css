@@ -204,7 +204,7 @@ td{
 .game-title img{
     width: 300px;
     height: 25%;
-    position:absolute;
+    position:relative;
     left: 5px;
     top:10px;
     transform: rotate(-10deg);
