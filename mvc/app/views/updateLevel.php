@@ -6,4 +6,7 @@
  session_start();
  $verifUser = new User();
  $hai=$verifUser->updateLevel($_SESSION['id'],$level,$challenge);
+ 
+ $verifUser->updatePunctaj($_SESSION['id'],$level,$challenge);
+ 
 ?>

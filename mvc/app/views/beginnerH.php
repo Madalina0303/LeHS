@@ -14,11 +14,10 @@
 
 <body>
     <header>
-        <img src="../../public/images/stintific.png" class="pers" alt="pers">
+        <img src="../../public/images/parot.png" class="pers" alt="pers">
 
         <div class="hi">
-           <p> Hi, i am the Gadget Guy, the scientist of the island and I will help you for this level
-            lalal
+           <p> Hi, i am the Parot Guy, the happiest animal from the jungle.
         </p>
         </div>
     </header>

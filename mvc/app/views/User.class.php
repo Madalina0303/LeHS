@@ -39,8 +39,8 @@ class User
                 // nu exista utilizatorul punem in bd si l punem si in tabela cu progress cu nivelul beginner si provocarea 0
                 echo 'Intra aicea dar nu face insert Rusinica ';
                 $query = "INSERT INTO " . $this->userTbl . ' VALUES(' . $userData['id'] . ',' . $userData['username'] . ',' . $userData['avatar'] . ',' . $userData['email'] . ',' . $userData['password'] . ')';
-                $queryhtml = "INSERT INTO " . $this->htmlTbl . ' VALUES(' . 'DEFAULT' . ',' . $userData['id'] . ',' . "\"" . "bh" . "\"" . ',' . "1" . ')';
-                $querycss = "INSERT INTO " . $this->cssTbl . ' VALUES(' . 'DEFAULT' . ',' . $userData['id'] . ',' . "\"" . "bc" . "\"" . ',' . "1" . ')';
+                $queryhtml = "INSERT INTO " . $this->htmlTbl . ' VALUES(' . 'DEFAULT' . ',' . $userData['id'] . ',' . "\"" . "bh" . "\"" . ',' . "1" . ',' . "0" . ')';
+                $querycss = "INSERT INTO " . $this->cssTbl . ' VALUES(' . 'DEFAULT' . ',' . $userData['id'] . ',' . "\"" . "bc" . "\"" . ',' . "1" . ',' . "0" . ')';
                 echo '<br/>';
                 echo $query;
                 $insert = $this->db->query($query);
@@ -154,11 +154,11 @@ class User
     {
         $progress = array();
         $prevQuery = "SELECT level,challenge FROM " . $this->htmlTbl . " WHERE idUser = " . $id;
-        echo $prevQuery;
+        // echo $prevQuery;
         $result = $this->db->query($prevQuery);
-       
+
         if ($result->num_rows == 1) {
-          
+
             $row = $result->fetch_assoc();
             $progress['level'] = $row['level'];
             $progress['challenge'] = $row['challenge'];
@@ -171,11 +171,11 @@ class User
     {
         $progress = array();
         $prevQuery = "SELECT level,challenge FROM " . $this->cssTbl . " WHERE idUser = " . $id;
-        echo $prevQuery;
+        //echo $prevQuery;
         $result = $this->db->query($prevQuery);
-       
+
         if ($result->num_rows == 1) {
-          
+
             $row = $result->fetch_assoc();
             $progress['level'] = $row['level'];
             $progress['challenge'] = $row['challenge'];
@@ -184,27 +184,222 @@ class User
 
         return null;
     }
-    function updateLevel($id='',$level='',$challenge=''){
-        echo "imi pierd toata rabdarea pe care o poate avea un om!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
-        if($level[1]=='h'){
-            echo " pierd rabdarea ^infinit";
-            $prevQuery = "Update " . $this->htmlTbl ." SET level=\"".$level."\",challenge=\"".$challenge."\" WHERE idUser = " . $id;
+    function getHtmlPunctaj($id = '')
+    {
+      
+        $prevQuery = "SELECT punctaj FROM " . $this->htmlTbl . " WHERE idUser = " . $id;
+        //echo $prevQuery;
+        $result = $this->db->query($prevQuery);
+
+        if ($result->num_rows == 1) {
+
+            $row = $result->fetch_assoc();
+            $punctaj=$row['punctaj'];
+            return $punctaj;
+        }
+
+        return null;
+    }
+    function getCssPunctaj($id = '')
+    {
+        
+        $prevQuery = "SELECT punctaj FROM " . $this->cssTbl . " WHERE idUser = " . $id;
+        //echo $prevQuery;
+        $result = $this->db->query($prevQuery);
+
+        if ($result->num_rows == 1) {
+
+            $row = $result->fetch_assoc();
+            $punctaj=$row['punctaj'];
+            return $punctaj;
+        }
+
+        return null;
+    }
+    function updateLevel($id = '', $level = '', $challenge = '')
+    {
+        
+        if ($level[1] == 'h') {
+            
+            $prevQuery = "Update " . $this->htmlTbl . " SET level=\"" . $level . "\",challenge=\"" . $challenge . "\" WHERE idUser = " . $id;
             echo $prevQuery;
             $result = $this->db->query($prevQuery);
-              
-        if ($result->num_rows == 1) {
-          return true;
-        }
-        }
-        else if($level[1]=='c'){
-            $prevQuery = "Update " . $this->cssTbl ." SET level=\"".$level."\",challenge=\"".$challenge."\" WHERE idUser = " . $id;
+
+            if ($result->num_rows == 1) {
+                return true;
+            }
+        } else if ($level[1] == 'c') {
+            $prevQuery = "Update " . $this->cssTbl . " SET level=\"" . $level . "\",challenge=\"" . $challenge . "\" WHERE idUser = " . $id;
             echo $prevQuery;
             $result = $this->db->query($prevQuery);
-              
-        if ($result->num_rows == 1) {
-          return true;
+
+            if ($result->num_rows == 1) {
+                return true;
+            }
         }
+        return false;
+    }
+    function sortHtml(){
+       echo " intra pe sort HTMLL";
+        $map=array();
+        $prevQuery = "SELECT username,punctaj FROM " . $this->htmlTbl . " JOIN  ".$this->userTbl." ON ".$this->htmlTbl.".idUser=".$this->userTbl.".id". " ORDER BY punctaj DESC";
+        // echo $prevQuery;
+        $result = $this->db->query($prevQuery);
+        
+        if ($result->num_rows > 0) {
+
+           while($row = $result->fetch_assoc()){
+            //echo "uite cat reuseste el sa ia";
+           // var_dump( $row);
+            // $topNume[$index] = $row['username'];
+            // $topPunctaj[$index]= $row['punctaj'];
+            // $index=$index+1;
+            $map[$row['username']]=$row['punctaj'];
+           //echo $topNume;
+          // echo" hai te rog eu frumos ";
+           //echo $topPunctaj;
         }
-    return false;
+        return $map;
+        }
+        return null;
+    }
+    function sortCss(){
+        echo " intra pe sort HTMLL";
+         $map=array();
+         $prevQuery = "SELECT username,punctaj FROM " . $this->cssTbl . " JOIN  ".$this->userTbl." ON ".$this->cssTbl.".idUser=".$this->userTbl.".id". " ORDER BY punctaj DESC";
+         // echo $prevQuery;
+         $result = $this->db->query($prevQuery);
+         
+         if ($result->num_rows > 0) {
+ 
+            while($row = $result->fetch_assoc()){
+             //echo "uite cat reuseste el sa ia";
+            // var_dump( $row);
+             // $topNume[$index] = $row['username'];
+             // $topPunctaj[$index]= $row['punctaj'];
+             // $index=$index+1;
+             $map[$row['username']]=$row['punctaj'];
+            //echo $topNume;
+           // echo" hai te rog eu frumos ";
+            //echo $topPunctaj;
+         }
+         return $map;
+         }
+         return null;
+     }
+    function updatePunctaj($id = '', $level = '', $challenge = '')
+    {
+        if ($level[1] == 'h') {
+            $punctaj = 0;
+            switch ($level) {
+
+                case "bh":
+                    switch ($challenge) {
+                        case 1:
+                            $punctaj = 0;
+                            break;
+                        case 2:
+                            $punctaj = 33;
+                            break;
+                        case 3:
+                            $punctaj = 66;
+                            break;
+                    }
+                    break;
+                case "ih":
+                    switch ($challenge) {
+                        case 1:
+                            $punctaj = 100;
+                            break;
+                        case 2:
+                            $punctaj = 133;
+                            break;
+                        case 3:
+                            $punctaj = 166;
+                            break;
+                    }
+                    break;
+                case "ah":
+                    switch ($challenge) {
+                        case 1:
+                            $punctaj = 200;
+                            break;
+                        case 2:
+                            $punctaj = 233;
+                            break;
+                        case 3:
+                            $punctaj = 266;
+                            break;
+                        case 4:
+                            $punctaj = 300;
+                            break;
+                    }
+                    break;
+            }
+
+            // update la punctaj HTML
+            $prevQuery = "Update " . $this->htmlTbl . " SET punctaj=\"" . $punctaj . "\" WHERE idUser = " . $id;
+            echo $prevQuery;
+            $result = $this->db->query($prevQuery);
+
+            if ($result->num_rows == 1) {
+                return true;
+            }
+        } else if ($level[1] == 'c') {
+            $punctaj = 0;
+            switch ($level) {
+
+                case "bc":
+                    switch ($challenge) {
+                        case 1:
+                            $punctaj = 0;
+                            break;
+                        case 2:
+                            $punctaj = 33;
+                            break;
+                        case 3:
+                            $punctaj = 66;
+                            break;
+                    }
+                    break;
+                case "ic":
+                    switch ($challenge) {
+                        case 1:
+                            $punctaj = 100;
+                            break;
+                        case 2:
+                            $punctaj = 133;
+                            break;
+                        case 3:
+                            $punctaj = 166;
+                            break;
+                    }
+                    break;
+                case "ac":
+                    switch ($challenge) {
+                        case 1:
+                            $punctaj = 200;
+                            break;
+                        case 2:
+                            $punctaj = 233;
+                            break;
+                        case 3:
+                            $punctaj = 266;
+                            break;
+                        case 4:
+                            $punctaj = 300;
+                            break;
+                    }
+                    break;
+            }
+            $prevQuery = "Update " . $this->htmlTbl . " SET punctaj=\"" . $punctaj . "\" WHERE idUser = " . $id;
+            echo $prevQuery;
+            $result = $this->db->query($prevQuery);
+
+            if ($result->num_rows == 1) {
+                return true;
+            }
+        }
+        return false;
     }
 }

@@ -97,9 +97,15 @@ try {
       var style = document.createElement('style');
       style.innerHTML = `
       body{
-      background-image: url("../../public/images/cns.png");
+      background-image: url("../../public/images/595.jpg");
       }
       `;
+      //  style.innerHTML = `
+      // body{
+      // background-color:#b3cb81;
+      // }
+      // `;
+      
       document.head.appendChild(style);
       switch (parseInt(challenge)) {
         case 1:

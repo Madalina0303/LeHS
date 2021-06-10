@@ -54,7 +54,7 @@
         <div class="dot1">
             <div class="levl__bgn">
                 <h3> Beginner </h3>
-                <p> Let's go to do some easy exercises together. In this step you can test your basic knowledge
+                <p> Let's  do some easy exercises together. In this section you can test your basic knowledge
                     about
                     HTML</p>
             </div>
@@ -85,7 +85,9 @@
         <div class="dot2">
             <div class="levl__intr">
                 <h3> Intermediate </h3>
-                <p>Descrierea acestui nivel </p>
+                <p> 
+Continue the challenge in order to gain new knowledge
+   </p>
             </div>
             <div class="overlay2">
                 <?php
@@ -115,7 +117,7 @@
 
             <div class="levl__adv">
                 <h3> Advanced </h3>
-                <p>Cateva cuv de spus despre bla bla bla</p>
+                <p>Test your limit with the last level in order to acomplish your goal</p>
 
             </div>
             <div class="overlay3">
@@ -156,8 +158,7 @@
             <div class="dot1Css">
                 <div class="levl__bgnCss">
                     <h3> Beginner </h3>
-                    <p> Let's go to do some easy exercises together. In this step you can test your basic knowledge
-                        about CSS.
+                    <p> At this step everything will be more colorful. Enjoy with some easy exercise at Css
                     </p>
                 </div>
                 <div class="overlay1Css">
@@ -191,7 +192,7 @@
             <div class="dot2Css">
                 <div class="levl__intrCss">
                     <h3> Intermediate </h3>
-                    <p> Ieii, ai trecut mai departe...
+                    <p> In this level you will meet the king of the jungle and his friends.
                     </p>
                 </div>
                 <div class="overlay2Css">
@@ -228,7 +229,7 @@
             <div class="dot3Css">
                 <div class="levl__advCss">
                     <h3> Advanced </h3>
-                    <p> Super... ai terminat.
+                    <p> Stay tunned, the finish line is close. Do you have the courage to complete this level?
                     </p>
                 </div>
                 <div class="overlay3Css">
@@ -269,17 +270,20 @@
     </div>
     <div class="footer">
         <div class="footer__text">
-            <p class="mor"> Adventure starts with us...</p>
+            <p> Adventure starts with us </p>
         </div>
         <div class="footer__img">
 
-            <div style="width:40%; color:thistle ; font-size:26px; padding:1em; margin-left:3%;background-color: rgba(0, 2, 7, 0.438); margin-top: 5%; size:40px;">Our team want to help you to learn from basic to advanced in html and css
-                ....................
-                Our team want to help you to learn from basic to advanced in html and css
-                MAKE IT EASY
+            <div style="width:40%; color:thistle ; font-size:26px; padding:1em; margin-left:3%;background-color: rgba(0, 2, 7, 0.438); margin-top: 5%; size:40px;">
+            
+           <br>
+            Our team want to help you to learn from basic to advanced in html and css.
+            Come on in jungle to help animals.It will be funny, we promise!
+                                        Good Luck ♥
+                                    
             </div>
 
-            <img src="../../public/images/complicated.png" class="ursSt" alt="urs">
+            <img src="../../public/images/complicated.png" id="ursSt" alt="urs">
 
             <!-- <img src="../../public/images/complicated.jpg" class="ursSt" alt="urs"> -->
 
