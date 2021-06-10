@@ -31,11 +31,21 @@
 //    if (($gitUser['$avatar'])){
 //      $poza=$gitUser[$avatar];
 //  echo '<img src=$poza alt="Penguin pirate" style="width:100%">';
-      
+require_once 'User.class.php';
 $var=session_start();
 $poza1=$_SESSION['poza'];
 $poza2=substr($poza1,1,strlen($poza1)-2);
 $nume=$_SESSION['nume'];
+$verifUser=new User();
+$progressH = $verifUser->getHtmlLevel($_SESSION['id']);
+$progressC = $verifUser->getCssLevel($_SESSION['id']);
+echo $progressC['level'];
+echo $progressC['challenge'];
+echo $progressH['level'];
+echo $progressH['challenge'];
+$procHtml=($verifUser->getHtmlPunctaj($_SESSION['id']))/3;
+$procCss=($verifUser->getCssPunctaj($_SESSION['id']))/3;
+$progAll=($procCss+$procHtml)/2;
 ?>
 
 <img src="<?php echo $poza2?>" style="width:100%">

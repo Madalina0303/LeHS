@@ -19,7 +19,7 @@
 
         
     </div>
-    <div class="button2" onclick="javascript:window.location='http://127.0.0.1:5500/mvc/app/views/leaderboard.html'">
+    <div class="button2" onclick="javascript:window.location='leaderboard.php'">
             <span>LeaderBoard</span>
     </div>
     <div class="button3" onclick="javascript:window.location='http://127.0.0.1:5500/mvc/app/views/settings.html'">
