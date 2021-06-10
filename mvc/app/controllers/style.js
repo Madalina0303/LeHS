@@ -22,17 +22,57 @@ async function getResource(lev, chl) {
       return response.json();
     })
     .then(json => {
-      printRequire(json[lev][chl].require);
-      printTemplate(json[lev][chl].template);
+      if(lev[1]=='h'){
+      printRequireHtml(json[lev][chl].require);
+      printTemplateHtml(json[lev][chl].template);
+      }
+      else if(lev[1]=='c'){
+        printRequireCss(json[lev][chl].require);
+        printTemplateCss(json[lev][chl].template);
+        printTemplateBoardCss(json[lev][chl].templateBoard);
+      }
 
     });
 }
-function printRequire(json) {
+function printTemplateBoardCss(json){
+  console.log("intra pe template board");
+  console.log(json);
+ //json 0 este pt animal
+ 
+ for(let i=0;i<json[0].length;i++){
+  let animal=document.createElement("div");
+  animal.innerHTML=json[0][i];
+  document.getElementById("animal").appendChild(animal);
+  console.log(json[0][i]);
+ }
+ // json 1 este pt hrana
+ for(let i=0;i<json[1].length;i++){
+  let hrana=document.createElement("div");
+  hrana.innerHTML=json[1][i];
+  document.getElementById("hrana").appendChild(hrana);
+ }
+}
+function printRequireCss(json){
+  console.log("cerinta este : ");
+  console.log(json);
+  let p = document.createElement("div");
+  p.innerHTML = json;
+  document.getElementsByClassName("enunt")[0].appendChild(p);
+}
+function printTemplateCss(json){
+  console.log("templateul este : ");
+  console.log(json);
+  let t = document.createElement("div");
+  t.innerHTML = json;
+  document.getElementById("cod").appendChild(t);
+  
+}
+function printRequireHtml(json) {
   let p = document.createElement("p");
   p.innerText = json;
   document.getElementsByClassName("require")[0].appendChild(p);
 }
-function printTemplate(json) {
+function printTemplateHtml(json) {
   let p0 = document.createElement("div");
   p0.innerHTML = json[0];
   document.getElementsByClassName("continut")[0].appendChild(p0);
@@ -60,6 +100,7 @@ try {
       background-image: url("../../public/images/cns.png");
       }
       `;
+      document.head.appendChild(style);
       switch (parseInt(challenge)) {
         case 1:
 
@@ -81,6 +122,7 @@ try {
       background-image: url("../../public/images/htr.jpg");
       }
       `;
+      document.head.appendChild(style);
       getResource(level, parseInt(challenge) - 1);
       
       break;
@@ -92,13 +134,57 @@ try {
       background-image: url("../../public/images/ploua1.jpg");
       }
       `;
-     
+      document.head.appendChild(style);
       getResource(level, parseInt(challenge) - 1);
       
       break;
+      case "bc":
+        getResource(level, parseInt(challenge) - 1);
+        console.log("intra aici")
+        break;
+      case "ic":
+        getResource(level, parseInt(challenge) - 1);
+      
+        break;
+      case "ac":
+        switch (parseInt(challenge)) {
+          case 1:
+            var style = document.createElement('style');
+            style.innerHTML = `
+            #hrana{
+            justify-content:flex-end;
+            }
+            `;
+            document.getElementById("hrana").appendChild(style);
+          
+            break;
+          case 2:
+            var style = document.createElement('style');
+            style.innerHTML = `
+            #hrana{
+            justify-content:center;
+            }
+            `;
+            document.getElementById("hrana").appendChild(style);
+          
+           
+            break;
+          case 3:
+            var style = document.createElement('style');
+            style.innerHTML = `
+            #hrana{
+            justify-content:space-around;
+            }
+            `;
+            document.getElementById("hrana").appendChild(style);
+          break;
+        }
+        getResource(level, parseInt(challenge) - 1);
+      
+        break;  
   }
 
-  document.head.appendChild(style);
+ 
 } catch (error) {
   console.log(error);
 }

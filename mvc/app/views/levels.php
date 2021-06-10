@@ -40,13 +40,16 @@
         //    start sa se transforme in continue daca i inceput dar nu-i finalizat iar daca e finalizat review
         $levelBD = $progress['level'];
         $chlgBD = $progress['challenge'];
-
+      
         //sa faca niste calcule sa vada cum e cu completeted
         // pentru nivelele <=cel curent alea vor fi 100
         // pentru nivelele > cel curent alea vor fi blocate si 0 la suta
         // pentru cel curent se imparte (100 la nr de provocari existente) * nr provocari facute +  (100 / nr de provocari existente/4)*cate is facute
         // trebuie facute if uri pt punctaj
-
+         $progressCss=$verifUser->getCssLevel($_SESSION['id']);
+         $levelBDCss = $progressCss['level'];
+         $chlgBDCss = $progressCss['challenge'];
+       
         ?>
         <div class="dot1">
             <div class="levl__bgn">
@@ -61,15 +64,20 @@
                 // daca deja a trecut de categoria asta atunci categori va fi cea prima a.i daca reintra va naviga prin tot ce a rezolvat 
                
                  if($levelBD=="bh")
-                  $chlg = $chlgBD; // dupa caz
-                  else
-                     $chlgBD=1;
+                  {$chlg = $chlgBD; // dupa caz
+                    $compl=33*($chlg-1);
+                    $curent="bh";
+                  }
+                  else{
+                     $chlg=1;
+                     $compl=100;
+                     }
                 ?>
 
                 <a href="beginnerH.php?level=bh&chlg=<?php echo $chlg ?>" class="btn">
                     Start
                 </a>
-                <p class="completed"> Completed: 0% </p>
+                <p class="completed"> Completed: <?php echo $compl?>% </p>
             </div>
 
         </div>
@@ -83,15 +91,24 @@
                 <?php
                 // verif daca levelul curent din bd este bh, daca da atunci provocarae  va fi aia tot din bd
                 // daca deja a trecut de categoria asta atunci categori va fi cea prima a.i daca reintra va naviga prin tot ce a rezolvat 
-                if($levelBD=="ih")
+                if($levelBD=="ih"){
                   $chlg = $chlgBD; // dupa caz
-                  else
-                     $chlgBD=1;
+                  $compl=33*($chlg-1);
+                  $curent="ih";
+                }
+                else{
+                    if(isset($curent) && $curent=="bh")
+                       $compl=0;
+                    else
+                       $compl=100;   
+                     $chlg=1;
+                    
+                  }
                 ?>
                 <a href="beginnerH.php?level=ih&chlg=<?php echo $chlg ?>" class="btn">
                     Start
                 </a>
-                <p class="completed"> Completed: 0% </p>
+                <p class="completed"> Completed: <?php echo $compl; ?>% </p>
             </div>
         </div>
         <div class="dot3">
@@ -105,14 +122,24 @@
                 <?php
                 // verif daca levelul curent din bd este bh, daca da atunci provocarae  va fi aia tot din bd
                 // daca deja a trecut de categoria asta atunci categori va fi cea prima a.i daca reintra va naviga prin tot ce a rezolvat 
-                if($levelBD=="ah")
+                if($levelBD=="ah"){
                 $chlg = $chlgBD; // dupa caz
-                else
-                   $chlgBD=1;
+                $compl=33*($chlg-1);
+                //problematic aici
+                if($chlg==4   )
+                $compl=100;
+                $curent="ah";
+                 }
+                else{
+                  if($curent=="ih" || $curent=="bh")
+                   $compl=0;
+                   $chlg=1;
+                }
                 ?>
                 <a href="beginnerH.php?level=ah&chlg=<?php echo $chlg ?>" class="btn">
                     Start
                 </a>
+                <p class="completed"> Completed: <?php echo $compl; ?>% </p>
             </div>
             <div id="next">
 
@@ -134,11 +161,30 @@
                     </p>
                 </div>
                 <div class="overlay1Css">
-                    <button type="button" class="btn">
-                        Start
+                <?php
+                // verif daca levelul curent din bd este bh, daca da atunci provocarae  va fi aia tot din bd
+                // daca deja a trecut de categoria asta atunci categori va fi cea prima a.i daca reintra va naviga prin tot ce a rezolvat 
+               
+                //  if($levelBDCss=="bc")
+                //   $chlg = $chlgBDCss; // dupa caz
+                //   else
+                //      $chlg=1;
 
-                    </button>
-                    <p class="completed"> Completed: 0% </p>
+                if($levelBDCss=="bc")
+                {$chlg = $chlgBDCss; // dupa caz
+                  $compl=33*($chlg-1);
+                  $curent="bc";
+                }
+                else{
+                   $chlg=1;
+                   $compl=100;
+                   }
+                ?>
+
+                <a href="beginnerC.php?level=bc&chlg=<?php echo $chlg ?>" class="btn">
+                    Start
+                </a>
+                    <p class="completed"> Completed:<?php echo $compl?>% </p>
                 </div>
 
             </div>
@@ -149,11 +195,33 @@
                     </p>
                 </div>
                 <div class="overlay2Css">
-                    <button type="button" class="btn">
-                        Start
+                <?php
+                // verif daca levelul curent din bd este bh, daca da atunci provocarae  va fi aia tot din bd
+                // daca deja a trecut de categoria asta atunci categori va fi cea prima a.i daca reintra va naviga prin tot ce a rezolvat 
+               
+                //  if($levelBD=="ic")
+                //   $chlg = $chlgBDCss; // dupa caz
+                //   else
+                //      $chlg=1;
+                if($levelBDCss=="ic"){
+                    $chlg = $chlgBDCss; // dupa caz
+                    $compl=33*($chlg-1);
+                    $curent="ic";
+                  }
+                  else{
+                      if(isset($curent) && $curent=="bc")
+                         $compl=0;
+                      else
+                         $compl=100;   
+                       $chlg=1;
+                      
+                    }
+                ?>
 
-                    </button>
-                    <p class="completed"> Completed: 0% </p>
+                <a href="beginnerC.php?level=ic&chlg=<?php echo $chlg ?>" class="btn">
+                    Start
+                </a>
+                    <p class="completed"> Completed: <?php echo $compl?>% </p>
                 </div>
 
             </div>
@@ -164,11 +232,33 @@
                     </p>
                 </div>
                 <div class="overlay3Css">
-                    <button type="button" class="btn">
-                        Start
+                <?php
+                // verif daca levelul curent din bd este bh, daca da atunci provocarae  va fi aia tot din bd
+                // daca deja a trecut de categoria asta atunci categori va fi cea prima a.i daca reintra va naviga prin tot ce a rezolvat 
+               
+                //  if($levelBD=="ac")
+                //   $chlg = $chlgBDCss; // dupa caz
+                //   else
+                //      $chlg=1;
+                if($levelBDCss=="ac"){
+                    $chlg = $chlgBDCss; // dupa caz
+                    $compl=33*($chlg-1);
+                    //problematic aici
+                    if($chlg==4   )
+                    $compl=100;
+                    $curent="ac";
+                     }
+                    else{
+                      if($curent=="ic" || $curent=="bc")
+                       $compl=0;
+                       $chlg=1;
+                    }
+                ?>
 
-                    </button>
-                    <p class="completed"> Completed: 0% </p>
+                <a href="beginnerC.php?level=ac&chlg=<?php echo $chlg ?>" class="btn">
+                    Start
+                </a>
+                    <p class="completed"> Completed: <?php echo $compl?>%  </p>
                 </div>
 
             </div>

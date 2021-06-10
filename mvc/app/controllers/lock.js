@@ -57,12 +57,56 @@ async function getAnswer(lst, lev, chl, nrA) {
     .then(json => {
 
       //return json[lev][chl].answer[0];
-      return verifCorect(lst, json[lev][chl].answer[nrA], nrA);
+      let rez=verifCorect(lst, json[lev][chl].answer[nrA], nrA);
+    updateLev(lev,chl,nrA,rez);
+    
 
     });
 }
+async function updateLev(lev,chl,nrA,rez){
+
+  if(nrA==3 && rez==true){
+    //await fetch(`${window.location.origin}/app/controllers/updateData.php?category=${categoryChosen}&lvl=${level+1}&ppl=${pointsPerLevel}&key=${key}`
+ //http://127.0.0.1:3000/app/views/beginnerC.php?level=ac&chlg=3
+  let nextLev=lev;
+  let nextChl=chl;
+ if(chl<=1)
+ {
+  console.log("intra pe cazul mic");
+   nextLev=lev;
+   nextChl=chl+2;
+   console.log(nextChl);
+ }
+ else if(chl==2 &&lev!="ah"){
+   console.log("intra pe cazul mare");
+  nextLev=nextLevel(lev);
+  nextChl=1;
+ }
+ else if(lev=="ah"&& chl==2)
+ {
+  nextLev=lev;
+  nextChl=4;
+ }
+
+ let denumire="../views/updateLevel.php?level="+nextLev+"&chlg="+nextChl;
+ console.log(denumire);
+ await fetch(denumire) .then(response => {
+   console.log("ia sa vedem ");
+   console.log(response);
+ 
+})
+  }
+}
+function nextLevel(lev){
+  switch(lev){
+    case "bh": return "ih";
+    case "ih":return "ah";
+  }
+  return null;
+}
 function nextPage() {
-  // salvare in bd a proiectului mai trebuie facute 
+  // salvare in bd a proiectului mai trebuie facute !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  
   // var path=window.location.pathname;
   // var page = path.split("/").pop();
   // console.log( page );
@@ -70,7 +114,7 @@ function nextPage() {
     if (challenge < 3) {
       let urmC = parseInt(challenge) + 1;
       location.href = '../views/beginnerH.php?level=bh&chlg='.concat(urmC);
-
+     
     }
     else {
       location.href = '../views/beginnerH.php?level=ih&chlg=1';
@@ -149,7 +193,7 @@ function verifCorect(lst, lstCorect, nrA) {
 
       case 3:
         next.addEventListener('click', nextPage);
-        brealk;
+        break;
 
     }
 

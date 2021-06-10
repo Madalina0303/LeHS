@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../public/css/beginnerC.css">
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
     <title>CSS-Beginner</title>
 </head>
 
@@ -31,22 +34,45 @@
         </button>
 
     </div>
+    <div class="tot">
         <div id="board">
-            <div id="broasca">
+            <div id="animal">
 
-                <div class="obiect1"></div>
+                <!-- <div class="obiect1"></div> -->
 
             </div>
 
-            <div id="nufar" style="justify-content:space-around;">
+            <!-- <div id="hrana" style="justify-content:space-around;"> -->
+            <div id="hrana">
+                <!-- <div class="obiect2"></div> -->
 
-                <div class="obiect2"></div>
+            </div>
 
+
+        </div>
+        <div class="cerinta">
+           <p class="enunt"></p>
+            <div id="cod">
+                <button type="submit" class="Verify">Verify</button>
+                <button type="button" class="next" >Next</button>
             </div>
         </div>
+    </div>
+    <?php
+        $level=htmlspecialchars($_GET["level"]);
+        $challenge=htmlspecialchars($_GET["chlg"]);
+        $levelL= "\"".$level."\"";
+        $challengeL="\"".$challenge."\"";
+   ?>
+    <script>
+     var level=<?php echo $levelL;?>;
+     var challenge=<?php echo $challengeL;?>;
+     </script>
 
-        <button type="submit" class="Verify">Verify>></button>
-        <script src="../controllers/move.js"></script>
+
+<script src="../controllers/style.js"></script> 
+    <script src="../controllers/move.js"></script>
+   
 </body>
 
 </html>

@@ -167,4 +167,44 @@ class User
 
         return null;
     }
+    function getCssLevel($id = '')
+    {
+        $progress = array();
+        $prevQuery = "SELECT level,challenge FROM " . $this->cssTbl . " WHERE idUser = " . $id;
+        echo $prevQuery;
+        $result = $this->db->query($prevQuery);
+       
+        if ($result->num_rows == 1) {
+          
+            $row = $result->fetch_assoc();
+            $progress['level'] = $row['level'];
+            $progress['challenge'] = $row['challenge'];
+            return $progress;
+        }
+
+        return null;
+    }
+    function updateLevel($id='',$level='',$challenge=''){
+        echo "imi pierd toata rabdarea pe care o poate avea un om!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
+        if($level[1]=='h'){
+            echo " pierd rabdarea ^infinit";
+            $prevQuery = "Update " . $this->htmlTbl ." SET level=\"".$level."\",challenge=\"".$challenge."\" WHERE idUser = " . $id;
+            echo $prevQuery;
+            $result = $this->db->query($prevQuery);
+              
+        if ($result->num_rows == 1) {
+          return true;
+        }
+        }
+        else if($level[1]=='c'){
+            $prevQuery = "Update " . $this->cssTbl ." SET level=\"".$level."\",challenge=\"".$challenge."\" WHERE idUser = " . $id;
+            echo $prevQuery;
+            $result = $this->db->query($prevQuery);
+              
+        if ($result->num_rows == 1) {
+          return true;
+        }
+        }
+    return false;
+    }
 }

@@ -105,6 +105,108 @@
                        ],
             "answer":[["<link rel=\"stylesheet\" href=\"style.css\">"],["<script src=\"src.js\"></script>"],["<?php include('action.php') ?>"],["<?php","echo \"Great job!\";", "?>"]]
         }
+    ],
+    "bc":[
+        {
+            "level":"beginnerCss",
+            "challenge":1,
+            "require":" <p style=\"width:40vw\">For a paragraph use CSS property and make the text have the red color,and the background green</p>",
+            "template":"<p>p{</p><textarea></textarea><br><textarea></textarea><p>}</p>",
+            "answer":["color:red;","background-color:green;"],
+            "templateBoard":[["<p class=\"model\">Welcome in jungle adventure!</p>" ],
+                            []
+                           ]         
+        },
+        {
+          
+            "level":"beginnerCss",
+            "challenge":2,
+            "require":" <p style=\"width:40vw\">Let's make something magic ,In order to make a rectangle to appear  set the width at 20px and height at 30px.</p>",
+            "template":"<p>.rectangle{</p><textarea></textarea><br><textarea></textarea><p>}</p>",
+            "answer":["width:20px;","height:30px;"],
+            "templateBoard":[["<div class=\"model\" style=\"background-color:green;\"></div>" ],
+                            []
+                           ]     
+        },
+        {
+            "level":"beginnerCss",
+            "challenge":3,
+            "require":"For the rectangle, set the following margins: top->3px left:50px",
+            "template":"<p>.rectangle{</p><textarea></textarea><br><textarea></textarea><p>}</p>",
+            "answer":["margin-top:3px;","margin-left:50px;"],
+            "templateBoard":[["<div class=\"model\" style=\"background-color:green;width:20px;height:30px;\"></div>" ],
+                            []
+                           ]    
+        }
+
+    ],
+    "ic":[
+        {
+            "level":"intermediateCss",
+            "challenge":1,
+            "require":" <p style=\"width:40vw\">Select all the monkey from the animal div<p> <p style=\"width:40vw\"> &lt div class=\"animals\" &gt </p><p style=\"width:40vw\"> &lt monkey /&gt </p><p style=\"width:40vw\"> &lt lion /&gt </p><p style=\"width:40vw\"> &lt /div &gt </p>",
+            "template":"<br><textarea></textarea>",
+            "answer":["monkey"],
+            "templateBoard":[["<img class=\"anim\" src=\"../../public/images/monkey.png \"   alt= \"monkey\" style=\"width:5em;height:8em;\">","<img src=\"../../public/images/lion.png\" alt= \"lion\"style=\"width:5em;height:8em\">"] ,
+                            []
+                           ]         
+        },
+        {
+          
+            "level":"intermediateCss",
+            "challenge":2,
+            "require":"<p style=\"width:40vw\">Select the element with a specific id: king <p> <p style=\"width:40vw\"> &lt div class=\"animals\" &gt </p><p style=\"width:40vw\"> &lt lion id=\"king \" /&gt </p><p style=\"width:40vw\"> &lt lion /&gt </p><p style=\"width:40vw\"> &lt /div &gt </p>",
+            "template":"<textarea></textarea>",
+            "answer":["#king"],
+            "templateBoard":[["<img class=\"anim\" src=\"../../public/images/lion.png \"   alt= \"lion\" style=\"width:5em;height:8em;\">","<img src=\"../../public/images/lion.png\" alt= \"lion\"style=\"width:5em;height:8em\">" ],
+                            []
+                           ]     
+        },
+        {
+            "level":"intermediateCss",
+            "challenge":3,
+            "require":"<p style=\"width:40vw\">Select all \"lions\" inside \"carnivors\" <p> <p style=\"width:40vw\"> &lt div class=\"animals\" &gt </p><p style=\"width:40vw\"> &lt carnivours &gt </p><p style=\"width:40vw\"> &lt lion /&gt </p> <p style=\"width:40vw\"> &lt tiger /&gt </p><p style=\"width:40vw\"> &lt /carnivours &gt </p><p style=\"width:40vw\"> &lt /div &gt </p>",
+            "template":"<textarea></textarea>",
+            "answer":["carnivours lion"],
+            "templateBoard":[["<img class=\"anim\" src=\"../../public/images/lion.png \"   alt= \"monkey\" style=\"width:5em;height:8em;\">","<img src=\"../../public/images/tiger.png\" alt= \"tiger\"style=\"width:5em;height:8em\">" ],
+                            []
+                           ]    
+        }
+
+
+    ],
+    "ac":[{
+        "level":"advancedCss",
+        "challenge":1,
+        "require":" <p style=\"width:40vw\">Use justify-content to help the monkey to get to the banana <p> ",
+        "template":"<p>#jungle{</p><p>display:flex;</p><textarea></textarea><p>}</p>",
+        "answer":["justify-content:flex-end;"],
+        "templateBoard":[["<img  src=\"../../public/images/monkey.png \"   alt= \"monkey\" style=\"width:5em;height:8em;margin-top:1em\">"] ,
+                        ["<img src=\"../../public/images/branch.png\" alt= \"banana\"style=\"width:8em;height:4em\">"]
+                       ]         
+    },
+    {
+      
+        "level":"advancedCss",
+        "challenge":2,
+        "require":" <p style=\"width:40vw\">Use justify-content to help the lion to get on the grass <p> ",
+        "template":"<p>#jungle{</p><p>display:flex;</p><textarea></textarea><p>}</p>",
+        "answer":["justify-content:center;"],
+        "templateBoard":[["<img  src=\"../../public/images/lion.png \"   alt= \"lion\" style=\"width:5em;height:8em;\">"] ,
+                        ["<img src=\"../../public/images/grass.png\" alt= \"grass\"style=\"width:8em;height:4em;margin-top:4em;\">"]
+                       ]         
+    },
+    {
+        "level":"advancedCss",
+        "challenge":3,
+        "require":" <p style=\"width:40vw\">Use justify-content to help the lions to get on the grass <p> ",
+        "template":"<p>#jungle{</p><p>display:flex;</p><textarea></textarea><p>}</p>",
+        "answer":["justify-content:space-around;"],
+        "templateBoard":[["<img  src=\"../../public/images/lion.png \"   alt= \"lion\" style=\"width:5em;height:8em;\">","<img  src=\"../../public/images/lion.png \"   alt= \"lion\" style=\"width:5em;height:8em;\">"] ,
+                        ["<img src=\"../../public/images/grass.png\" alt= \"grass\"style=\"width:8em;height:4em;margin-top:4em;\">","<img src=\"../../public/images/grass.png\" alt= \"grass\"style=\"width:8em;height:4em;margin-top:4em;\">"]
+                       ]   
+    }
+
     ]
 
 }
