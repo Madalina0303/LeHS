@@ -1,14 +1,20 @@
 <?php
 
 class User
-{
-    private $dbHost     = "localhost";
-    private $dbUsername = "root";
-    private $dbPassword = "";
-    private $dbName     = "oauth2_login"; // de pus o baza de date normala a noastra 
-    private $userTbl    = 'users';
-    private $htmlTbl    = 'user_progresshtml';
+{  private $dbHost     = "localhost";
+     private $dbUsername = "root";
+     private $dbPassword = "";
+     private $dbName     = "oauth2_login"; // de pus o baza de date normala a noastra 
+     private $userTbl    = 'users';
+     private $htmlTbl    = 'user_progresshtml';
     private $cssTbl     = 'user_progresscss';
+    // private $dbHost     = "sql108.epizy.com";
+    // private $dbUsername = "epiz_28765552";
+    // private $dbPassword = "pKW5OVt7sD";
+    // private $dbName     = "epiz_28765552_lehs"; 
+    // private $userTbl    = 'users';
+    // private $htmlTbl    = 'user_progresshtml';
+    // private $cssTbl     = 'user_progresscss';
     function __construct()
     {
         if (!isset($this->db)) {
@@ -392,7 +398,7 @@ class User
                     }
                     break;
             }
-            $prevQuery = "Update " . $this->htmlTbl . " SET punctaj=\"" . $punctaj . "\" WHERE idUser = " . $id;
+            $prevQuery = "Update " . $this->cssTbl . " SET punctaj=\"" . $punctaj . "\" WHERE idUser = " . $id;
             echo $prevQuery;
             $result = $this->db->query($prevQuery);
 

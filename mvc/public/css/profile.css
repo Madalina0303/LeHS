@@ -1,8 +1,9 @@
 body{
+  background-repeat: no-repeat;
   margin:0;
+  min-height: 100vh;
   padding:0;
-  padding:0;
-  background-image :linear-gradient(rgba(0, 0, 0, 0.13),rgba(0, 12, 6, 0.158)),url(https://cdnb.artstation.com/p/assets/images/images/004/390/815/large/rachel-eady-the-wilds-room-2.jpg?1483343041);
+  background-image :linear-gradient(rgba(0, 0, 0, 0.13),rgba(0, 12, 6, 0.158)),url("../images/backProfil.jpg");
   background-size: cover;
 }
 
@@ -10,7 +11,7 @@ body{
 .game-title{
   width: 70px;
   height: 70px;
-  position:absolute;
+  position:relative;
   left: 5px;
   top:10px;
   transform: rotate(-10deg);
@@ -48,24 +49,23 @@ h1{
     margin-left: 2%;
     margin-top:3%;
     text-align: center;
-    background-image:linear-gradient(#AED6F1  ,#1E8449, #AED6F1 );
+    /* background-image:linear-gradient(#AED6F1  ,#1E8449, #AED6F1 ); */
+    background-image:linear-gradient(#8b9a3d  ,#7fc1e3, #ae7820 );
+
     box-shadow: 2px 2px 16px 1px #aaa;
   
   }
   
-  .title {
-    color: grey;
-    font-size: 18px;
-    padding-bottom:0;
-    margin-bottom: 0;
+  a:link{
+    color:white;
   }
-  
+
   button {
     border: none;
     outline: 0;
     display: inline-block;
     padding: 8px;
-    color: white;
+    
     background-color: #000;
     text-align: center;
     cursor: pointer;
@@ -75,13 +75,9 @@ h1{
    
   }
   
-  a {
-    text-decoration: none;
-    font-size: 22px;
-    color: black;
-  }
+
   
-  button:hover, a:hover {
+  button:hover {
     opacity: 0.7;
   }
 
@@ -96,7 +92,9 @@ h1{
     margin-left: 5%;
     margin-top:3%;
     text-align: left;
-    background-image:linear-gradient(#A9DFBF,#85C1E9 ,#1E8449);
+    /* background-image:linear-gradient(#A9DFBF,#85C1E9 ,#1E8449); */
+    background-image:linear-gradient(#8b9a3d  ,#7fc1e3, #ae7820 );
+
     border-radius: 10%;
     box-shadow: 2px 2px 16px 1px #aaa;
   }
@@ -110,7 +108,7 @@ h1{
 
   .title{
     color: grey;
-    font-size: 30px;
+    font-size: 40px;
     padding-bottom: 0%;
     padding-left: 2%;
 
@@ -132,7 +130,7 @@ h1{
 }
 
 circle {
-  position: absolute;
+  position: relative;
   fill: none;
   stroke-width: 10;
   transform: translate(10px, 10px); /* This is to position it in the center */
@@ -140,11 +138,7 @@ circle {
   stroke-linecap: round;
 }
 
-.percent1 circle:nth-child(2) {
-  stroke: green;
-  animation: percent 1.5s linear;
-  animation-delay: 1s;
-}
+
 
 /* Animation definition */
 @keyframes percent {
@@ -155,7 +149,8 @@ circle {
 }
 
 .percent1 circle:nth-child(2) {
-  stroke-dashoffset: calc(440 - (440 * 75) / 100); /* Here's what's changed */
+  /* stroke-dashoffset: calc(440 - (440 * 5.5) / 100);  */
+  /* stroke-dashoffset: 500; */
   stroke: green;
   animation: percent 1.5s linear;
   animation-delay: 1s;
@@ -174,7 +169,7 @@ circle {
 }
 
 span {
-  font-size: 30px;
+  font-size: 40px;
   opacity: .7;
 }
 
@@ -189,7 +184,7 @@ span {
     float: left;
     list-style-type: none;
     padding-left: 20%;
-    padding-right: 5.3333333%;
+    padding-right: 5%;
   }
   
   li:nth-child(even) { margin-bottom: 5em;
@@ -207,9 +202,9 @@ span {
   /* Styling the determinate progress element */
   
   progress[value] {
-    appearance: none;
+/*     appearance: none;
     
-    border: none;
+    border: none; */
     
     /* Add dimensions */
     width: 100%; height: 20px;
@@ -218,7 +213,7 @@ span {
       border-radius: 3px;
       box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
     
-    color: royalblue;
+/*     color: royalblue; */
     
     position: relative;
     margin: 0 0 1.5em; 
@@ -236,60 +231,10 @@ span {
     
     background-size: 35px 20px, 100% 100%, 100% 100%;
     border-radius:3px;
-    animation: animate-stripes 5s linear infinite;
-  }
-  
-  @keyframes animate-stripes { 100% { background-position: -100px 0; } }
-  
-  
-  progress[value]::-webkit-progress-value:after {
-    content: '';
-    position: absolute;
-    
-    width:5px; height:5px;
-    top:7px; right:7px;
-    
-    background-color: white;
-    border-radius: 100%;
-  }
-  
-
-  progress[value]::-moz-progress-bar {
-    /* Gradient background with Stripes */
-    background-image:
-    -moz-linear-gradient( 135deg,
-                             transparent,
-                             transparent 33%,
-                             rgba(0,0,0,.1) 33%,
-                             rgba(0,0,0,.1) 66%,
-                             transparent 66%),
-      -moz-linear-gradient( top,
-                              rgba(255, 255, 255, .25),
-                              rgba(0,0,0,.2)),
-       -moz-linear-gradient( left, #09c, #f44);
-    
-    background-size: 35px 20px, 100% 100%, 100% 100%;
-    border-radius:3px;
     
   }
   
-  /* Fallback technique styles */
-  .progress-bar {
-    background-color: whiteSmoke;
-    border-radius: 3px;
-    box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
-  
-    /* Dimensions should be similar to the parent progress element. */
-    width: 100%; height:20px;
-  }
-  
-  .progress-bar span {
-    background-color: royalblue;
-    border-radius: 3px;
-    
-    display: block;
-    text-indent: -9999px;
-  }
+ 
   
   p[data-value] { 
     
@@ -353,54 +298,14 @@ span {
        -webkit-linear-gradient( left, #09c, #690);
   }
   
+ 
   
-  .html5::-moz-progress-bar {
-    /* Gradient background with Stripes */
-    background-image:
-    -moz-linear-gradient( 135deg,
-                             transparent,
-                             transparent 33%,
-                             rgba(0,0,0,.1) 33%,
-                             rgba(0,0,0,.1) 66%,
-                             transparent 66%),
-      -moz-linear-gradient( top,
-                              rgba(255, 255, 255, .25),
-                              rgba(0,0,0,.2)),
-       -moz-linear-gradient( left, #09c, #f44);
+  @media  screen and (max-width:480px) {
+    .card h1{
+      font-size: 20px;
+      
+    }
   }
-  
-  .css3::-moz-progress-bar {
-
-    /* Gradient background with Stripes */
-    background-image:
-    -moz-linear-gradient( 135deg,
-                             transparent,
-                             transparent 33%,
-                             rgba(0,0,0,.1) 33%,
-                             rgba(0,0,0,.1) 66%,
-                             transparent 66%),
-      -moz-linear-gradient( top,
-                              rgba(255, 255, 255, .25),
-                              rgba(0,0,0,.2)),
-       -moz-linear-gradient( left, #09c, #ff0);
-  }
-  
-  .jquery::-moz-progress-bar {
-    /* Gradient background with Stripes */
-    background-image:
-    -moz-linear-gradient( 135deg,
-                             transparent,
-                             transparent 33%,
-                             rgba(0,0,0,.1) 33%,
-                             rgba(0,0,0,.1) 66%,
-                             transparent 66%),
-      -moz-linear-gradient( top,
-                              rgba(255, 255, 255, .25),
-                              rgba(0,0,0,.2)),
-       -moz-linear-gradient( left, #09c, #690);
-  }
-  
-
   @media  screen and (max-width:950px) {
 
     .cards{
@@ -418,17 +323,3 @@ span {
     
         
     }
-    
-    @media  screen and (max-width:600px) {
-        
-        .card1{
-            width:100%;
-       
-        }
-       
-           
-       }
-    
-  
-
-  

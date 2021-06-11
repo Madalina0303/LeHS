@@ -22,15 +22,15 @@
             </div>
 
             <div class="btn-icons">
-                <img src="../../public/img/thumbs/gallery.jpg" alt="gallery" onclick="javascript:window.location='http://127.0.0.1:5500/mvc/app/views/gallery.html'">
-                <img src="../../public/img/thumbs/play.png" alt="play" onclick="javascript:window.location='http://127.0.0.1:5500/mvc/app/views/menu.html'">
+                <img src="../../public/img/thumbs/gallery.jpg" alt="gallery" onclick="javascript:window.location='gallery.php'">
+                <img src="../../public/img/thumbs/play.png" alt="play" onclick="javascript:window.location='menu.php'">
             </div>
         </div>
 
 
         <div class="wrapper">
             <div class="characters">
-                <img src="../../public/img/thumbs/penguin1.png" alt="character ">
+                <img src="../../public/images/maimuta.png" alt="character ">
             </div>
 
             <div class="form-box">
@@ -41,12 +41,12 @@
                     <button type="button" class="toggle-btn" onclick="register()">Register</button>
                 </div>
                 <div class="social-icons">
-                    <img src="../../public/img/thumbs/fb.png" alt="facebook">
+                    <!-- <img src="../../public/img/thumbs/fb.png" alt="facebook"> -->
                     <a href="https://github.com/login/oauth/authorize?client_id=828bd86cb437a36d7c6a"> <img src="../../public/img/thumbs/gh.png" alt="github"></a>
-                    <a href=""> <img src="../../public/img/thumbs/gp.png" alt="google"> </a>
+                    <!-- <a href=""> <img src="../../public/img/thumbs/gp.png" alt="google"> </a> -->
                 </div>
-                <form id="login" action ="./index.php" method="POST"   class="input-group">
-                    <input type="text" class="input-field"  name="username-login" placeholder="User Id" required>
+                <form id="login" action="./index.php" method="POST" class="input-group">
+                    <input type="text" class="input-field" name="username-login" placeholder="User Name" required>
                     <input type="password" class="input-field" name="password-login" placeholder="Enter Password" required>
                     <input type="checkbox" class="check-box" name="remember"><span>Remember Password</span>
                     <button type="submit" class="submit-btn">Log in</button>
@@ -64,63 +64,69 @@
 
                 </form>
                 <script src="../controllers/ajax.js">
-                   
+
                 </script>
                 <?php
-                echo '<p> Fac ce vreau </p>';
+                // echo '<p> Fac ce vreau </p>';
                 require_once 'User.class.php';
-                $userVerif=new User();
-                if($userVerif->alreadyExist1()==0){
-                if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['checked']) ) {
-                    
-                    $info['id'] = "'" . uniqid() . "'";
-                    $info['username'] = "'" . $_POST['username'] . "'";
-                    $info['email'] = "'" . $_POST['email'] . "'";
-                    $info['password'] = "'" . password_hash($_POST['password'],PASSWORD_DEFAULT) . "'";
-                    $info['avatar'] = "'https://www.kindpng.com/picc/m/21-214439_free-high-quality-person-icon-default-profile-picture.png'"; // url la default
-                    // daca exista facem un echo 
-                    // introdu alt nume
-                   // $usr  = new User();
-                    $userVerif->checkUser($info);
+                $userVerif = new User();
+                if ($userVerif->alreadyExist1() == 0) {
+                    if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['checked'])) {
+
+                        $info['id'] = "'" . uniqid() . "'";
+                        $info['username'] = "'" . $_POST['username'] . "'";
+                        $info['email'] = "'" . $_POST['email'] . "'";
+                        $info['password'] = "'" . password_hash($_POST['password'], PASSWORD_DEFAULT) . "'";
+                        $info['avatar'] = "'https://www.kindpng.com/picc/m/21-214439_free-high-quality-person-icon-default-profile-picture.png'"; // url la default
+                        // daca exista facem un echo 
+                        // introdu alt nume
+                        // $usr  = new User();
+                        $userVerif->checkUser($info);
+                    }
                 } else {
-                    echo " nu e bine";
+                    echo '<p>Deja exista </p>';
                 }
-            }
-            else{
-                echo '<p>Deja exista </p>';
-            }
                 ?>
                 <?php
-                      if(isset ($_POST['username-login']) && isset($_POST['password-login'])){
-                           $passwordDB=$userVerif->alreadyExist2();
-                          if( strcmp($passwordDB,"nu exista")==0){
-                            echo '<p>Utilizator inexistent </p>';
-                          }
-                        else {
-                             // echo "parola-DB ".$passwordDB;
-                              $pass=password_hash($_POST['password-login'],PASSWORD_DEFAULT);
-                              //echo " Hash ". $pass;
-                            if(!(password_verify($_POST['password-login'],$passwordDB)))
+                if (isset($_POST['username-login']) && isset($_POST['password-login'])) {
+                    $passwordDB = $userVerif->alreadyExist2();
+                    if (strcmp($passwordDB, "nu exista") == 0) {
+                        echo '<p>Utilizator inexistent </p>';
+                    } else {
+                        // echo "parola-DB ".$passwordDB;
+                        $pass = password_hash($_POST['password-login'], PASSWORD_DEFAULT);
+                        //echo " Hash ". $pass;
+                        if (!(password_verify($_POST['password-login'], $passwordDB)))
                             echo '<p>Parola invalida </p>';
-                            else{
+                        else {
                             // du-ma direct pe pagina de menu ---
                             session_start();
-                            $_SESSION['poza'] = "'".$userVerif->poza()."'";
-                            
+                            $_SESSION['poza'] = "'" . $userVerif->poza() . "'";
+
                             $_SESSION['nume'] = $_POST['username-login'];
 
-                            $_SESSION['id'] = "'".$userVerif->getId()."'";
+                            $_SESSION['id'] = "'" . $userVerif->getId() . "'";
 
-                                header('Location: http://127.0.0.1:3000/app/views/menu.php');
-                                exit; 
-                            }
-                        } 
+                            header('Location: http://127.0.0.1:3000/app/views/menu.php');
+                            exit;
                         }
+                    }
+                }
                 ?>
             </div>
 
         </div>
+        <footer>
 
+
+            <div>
+                <a href="raport.html">Raportul proiectului</a>
+            </div>
+            <div> <a href="ghid.html">Ghidul Utilizatorului</a> </div>
+            <div> <a href='https://www.freepik.com/vectors/tree'>Tree vector created by brgfx - www.freepik.com</a>
+            </div>
+
+        </footer>
     </div>
 
     <script src="../controllers/index.js"></script>

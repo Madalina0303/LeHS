@@ -17,99 +17,104 @@
         <img src="../../public/images/parot.png" class="pers" alt="pers">
 
         <div class="hi">
-           <p> Hi, i am the Parot Guy, the happiest animal from the jungle.
-        </p>
+            <p> Hi, i am the Parot Guy, the happiest animal from the jungle.
+            </p>
         </div>
     </header>
     <div class="lnk">
-        <button type="button" class="btnn" onclick="document.location='menu.html'">
-        <img src="../../public/images/homeWh.png" alt="home button" >
-    </button>
-    <button type="button" class="btnn" onclick="document.location='profile.html'">
-        <img src="../../public/images/prf.png" alt="profil button" >
-    </button>
-    <button type="button" class="btnn" onclick="document.location='levels.html'">
-        <img src="../../public/images/level1.png" alt=" level button" >
-    </button>
+        <!-- <button type="button" class="btnn" onclick="document.location='menu.html'"> -->
+        <a href="menu.php">
+            <div class="btnn">
+            <img  src="../../public/images/homeWh.png" alt="home button">
+            </div>
+        </a>
+        <!-- </button> -->
+        <!-- <button type="button" class="btnn" onclick="document.location='profile.html'">
+            <img src="../../public/images/prf.png" alt="profil button">
+        </button>
+        <button type="button" class="btnn" onclick="document.location='levels.html'">
+            <img src="../../public/images/level1.png" alt=" level button">
+        </button> -->
+        <a href="profil.php">
+            <div class="btnn">
+            <img  src="../../public/images/prf.png" alt="profil button">
+            </div>
+        </a>
+        <a href="levels.php">
+            <div class="btnn">
+            <img  src="../../public/images/level1.png" alt="level button">
+            </div>
+        </a>
     </div>
     <div class="require"></div>
     <div class="exercitiu">
-      
-      
+
+
         <div class="cod">
-            
+
             <div class="continut">
-            
-            <!-- <p> &lt;p&gt; Un paragraf &lt;&#47;p&gt; </p>
-            <textarea id="ln1" autofocus></textarea> -->
+
+
             </div>
             <button type="submit" class="Verify">Verify>></button>
         </div>
-       
+
         <div class="cod">
-            
+
             <div class="continut">
-            
-            <!-- <p> &lt;p&gt; Un exercitiu ceva &lt;&#47;p&gt; </p>
-            <textarea id="ln2" ></textarea> -->
+
             </div>
             <button type="submit" class="Verify">Verify>></button>
         </div>
-        
+
         <div class="cod">
-            
+
             <div class="continut">
-            
-            <!-- <p> &lt;p&gt; Altceva &lt;&#47;p&gt; </p>
-            <textarea id="ln3" ></textarea> -->
+
+
             </div>
             <button type="submit" class="Verify">Verify>></button>
         </div>
-        
+
         <div class="cod">
-            
+
             <div class="continut">
-            
-            <!-- <p> &lt;p&gt; Text text text &lt;&#47;p&gt; </p>
-            <textarea id="ln4"></textarea> -->
+
             </div>
             <button type="submit" class="Verify">Verify>></button>
-            <button type="button" class="next" > Next</button>
+            <button type="button" class="next"> Next</button>
             <!-- se salveaza in bd progresul si schimbam noi url la provocarae urma respectiv la nivelul urm  -->
         </div>
-       
-      
+
+
     </div>
     <?php
-      // splituim aicea linkul sa vedem ce  nivel este si ce provocare
-      //  le dam ca  variabile la js si de acolo se schimba dupa caz imaginea de fundal respectiv exercitiile
-     
-      $level=htmlspecialchars($_GET["level"]);
-      $challenge=htmlspecialchars($_GET["chlg"]);
-      echo 'url!!!!!!!:';
-      echo $level;
-      echo '<br>';
-      echo $challenge;
-       $levelL= "\"".$level."\"";
-       $challengeL="\"".$challenge."\"";
-      ?>
-      <!-- <script> 
-       let level=<?php echo $levelL;?>
+    // splituim aicea linkul sa vedem ce  nivel este si ce provocare
+    //  le dam ca  variabile la js si de acolo se schimba dupa caz imaginea de fundal respectiv exercitiile
+
+    $level = htmlspecialchars($_GET["level"]);
+    $challenge = htmlspecialchars($_GET["chlg"]);
+   
+    $levelL = "\"" . $level . "\"";
+    $challengeL = "\"" . $challenge . "\"";
+    ?>
+    <!-- <script> 
+       let level=<?php echo $levelL; ?>
        
       </script>
       <script> 
        
-       var challenge=<?php echo $challengeL;?>
+       var challenge=<?php echo $challengeL; ?>
       
       </script>
      -->
-     <script>
-     var level=<?php echo $levelL;?>;
-     var challenge=<?php echo $challengeL;?>;
-     </script>
+    <script>
+        var level = <?php echo $levelL; ?>;
+        var challenge = <?php echo $challengeL; ?>;
+    </script>
     <script src="../controllers/style.js"></script>
     <script src="../controllers/lock.js"></script>
-   
+
 </body>
 
 </html>

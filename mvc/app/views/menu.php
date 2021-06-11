@@ -22,18 +22,18 @@
     <div class="button2" onclick="javascript:window.location='leaderboard.php'">
             <span>LeaderBoard</span>
     </div>
-    <div class="button3" onclick="javascript:window.location='http://127.0.0.1:5500/mvc/app/views/settings.html'">
+    <div class="button3" onclick="javascript:window.location='settings.php'">
         <span><div>S</div><div>e</div><div>t</div><div>t</div><div>i</div><div>n</div><div>g</div><div>s</div></span>
-        <img src="img/gallery-penguin1.png" alt="penguin">
+      
     </div>
 
-    <div class="button4" onclick="javascript:window.location='http://127.0.0.1:3000/app/views/profile.php'">
+    <div class="button4" onclick="javascript:window.location='profile.php'">
         <span><div>P</div><div>r</div><div>o</div><div>f</div><div>i</div><div>l</div><div>e</div></span>
         
     </div>
     
 
-    <div class="button5" onclick="javascript:window.location='http://127.0.0.1:5500/mvc/app/views/index.html'">
+    <div class="button5" onclick="javascript:window.location='index.php'">
         <span>Exit Game</span>
         
     </div>

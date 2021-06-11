@@ -71,12 +71,32 @@ background-size: cover;
     width: 150%;
     font-size: 15px;
 }
+#ln11{
+    width: 140%;
+    font-size: 15px;
+}
 #lnmica{
     background-color: #3863a0;;
     color:rgb(213, 219, 236);
     /* height: 8%; */
     width: 20%;
     font-size: 15px;
+}
+.require
+{
+    margin-left:2em;
+    border: solid black 1px;
+    background-color:rgba(119, 119, 141, 0.438);
+    border-radius: 20%;
+    min-height: 7em;
+    width: 60vw;
+    margin-left: 18vw;
+    margin-top: 2em;
+
+}
+.require p{
+    padding: 1em;
+    color:peachpuff;
 }
 #lnspec{
     background-color: #3863a0;;
@@ -164,6 +184,26 @@ background-size: cover;
     }
     
 }
+@media screen and (max-width:1215px ){
+    .cod{
+        height: 40em;
+       
+        font-size: 10px;
+    }
+    
+}
+@media screen and (max-width:601px ){
+    .continut div{
+        height: 50%;
+    }
+    
+}
+@media screen and (max-width:365px ){
+    #ln1,#ln11{
+        width: 60%;
+    }
+    
+}
 .lnk{
     display: flex;
     flex-direction: row;
@@ -174,8 +214,8 @@ background-size: cover;
     width:10em;
   }
   .btnn img{
-    height: 30px;
-    width: 30px;
+    height: 33px;
+    width: 40px;
    
   }
 

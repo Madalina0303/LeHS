@@ -142,25 +142,25 @@
     border-radius: 50%;
     opacity: 0;
     transition: .5s ease;
-    background-image:url("../../public/images/pf1.png");
+    background-image:url("../../public/images/oaza.PNG");
     /* background-image: url("../../public/images/garyM.jpg"); */
       /* background-image: linear-gradient(black,grey);*/
-      background-color: #fee664;
+      /* background-color: #fee664; */
 } 
   .overlay2{
-    background-image: url('../../public/images/pp1.png');
+    background-image: url('../../public/images/elefant.PNG');
   }
   .overlay3{
     background-image: url('../../public/images/ps1.png');
   }
   .overlay1Css{
-    background-image:url("../../public/images/frumimic.png");
+    background-image:url("../../public/images/css1.jpg");
   }
   .overlay2Css{
-    background-image:url("../../public/images/preistoricmic.png");
+    background-image:url("../../public/images/css2.jpg");
   }
   .overlay3Css{
-    background-image:url("../../public/images/tropicalMic.jpg");
+    background-image:url("../../public/images/css3.jpg");
   }
   .start {
   
@@ -273,22 +273,23 @@ body{
 }
 .btn
 {
-  background-color:rgb(30, 218, 243);
-   width: 6em;
+  background-color:rgb(243, 126, 30);
+   width:3em;
    /*
   height: 3em; */
   position: absolute;
   font-size: 25px;
   top:40%;
-  left:18%;
+  left:33%;
   color:wheat;
+  align-items:center;
 }
 .completed{
   position: absolute;
-  font-size: 20px;
+  font-size: 23px;
   top:60%;
   left:20%;
-  color:wheat;
+  color:rgb(236, 248, 238);
 }
 @media screen and (max-width: 934px){
  

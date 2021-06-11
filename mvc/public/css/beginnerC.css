@@ -1,6 +1,6 @@
 body{
     /* background-color:  #f5f7f9; */
-background-image: url("../../public/images/dot1.png");
+background-image: url("../../public/images/backSet.jpg");
 min-height: 100%;
 background-repeat: no-repeat;
 background-attachment: fixed;
@@ -12,7 +12,16 @@ background-size: cover;
     animation: pulse 1s linear infinite;
    
 }
-
+.enunt{
+   
+   
+    border: solid black 1px;
+    background-color:rgba(119, 119, 141, 0.438);
+    border-radius: 20%;
+    min-height: 7em;
+    margin-left:1em;
+    padding:1em;
+}
 @keyframes pulse {
 0% {
  -webkit-transform: scale(1.1);
@@ -76,11 +85,13 @@ transform: scale(1);
     width: 48vw;
     height: 90vh;
     overflow: hidden;
-    background-color: #15a4e6;
+    background-image:linear-gradient(rgb(206, 223, 206),rgb(110, 218, 110)
+    );
     border:3px solid black;
+    border-radius: 3%;
   }
   .next{
-    background-color:#351c1c;
+    background-color:#0b924f;
     color:rgb(213, 219, 206);
     width: 6em;
     border: none;
@@ -125,10 +136,11 @@ transform: scale(1);
 }
 #cod{
     height: 20em;
-    background-color: blueviolet;
+    background-color: rgb(126, 180, 230);
     width: 45vw;
     margin: 1em;
-    border:solid 3px red;
+    border:solid 3px black;
+    border-radius:3%;
     position: relative;
 }
 
@@ -179,7 +191,7 @@ transform: scale(1);
     bottom: 0.5em;
     /* background-color:rgb(213, 219, 236);  */
     /* background-color: #FFFFFF4D; */
-    background-color: #e6157d;
+    background-color: #0b924f;
     color:rgb(213, 219, 206);
     width: 6em;
     border: none;
@@ -210,8 +222,18 @@ transform: scale(1);
 }
 
 @media screen and (max-width:800px ){
-    .cod{
-        width: 40em;
+    
+    #cod,#board{
+        width: 60vw;
+       
+    }
+    
+}
+@media screen and (max-width:435px ){
+    
+    #cod,#board{
+        width: 70vw;
+       
     }
     
 }

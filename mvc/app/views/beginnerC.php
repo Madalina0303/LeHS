@@ -23,13 +23,13 @@
         </div>
     </header>
     <div class="lnk">
-        <button type="button" class="btnn" onclick="document.location='menu.html'">
+        <button type="button" class="btnn" onclick="document.location='menu.php'">
             <img src="../../public/images/homeWh.png" alt="home button">
         </button>
-        <button type="button" class="btnn" onclick="document.location='profile.html'">
+        <button type="button" class="btnn" onclick="document.location='profile.php'">
             <img src="../../public/images/prf.png" alt="profil button">
         </button>
-        <button type="button" class="btnn" onclick="document.location='levels.html'">
+        <button type="button" class="btnn" onclick="document.location='levels.php'">
             <img src="../../public/images/level1.png" alt=" level button">
         </button>
 

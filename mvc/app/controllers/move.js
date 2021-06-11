@@ -96,7 +96,7 @@ async function getAnswer(lst, lev, chl) {
 async function updateLev(lev,chl,rez){
 
   if(rez==true){
-    //await fetch(`${window.location.origin}/app/controllers/updateData.php?category=${categoryChosen}&lvl=${level+1}&ppl=${pointsPerLevel}&key=${key}`
+  
  //http://127.0.0.1:3000/app/views/beginnerC.php?level=ac&chlg=3
   let nextLev=lev;
   let nextChl=chl;

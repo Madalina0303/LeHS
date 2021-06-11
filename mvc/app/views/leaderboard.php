@@ -13,27 +13,23 @@
  session_start();
  $verifUser = new User();
  $jmk=$verifUser->sortHtml();
+ $numeH=array();
+ $puncteH=array();
+ $ind=0;
  foreach($jmk as $key => $value){
-    echo $key;
-    echo "lalal";
-    echo $value;
- 
+   $numeH[$ind]=$key;
+   $puncteH[$ind]=$value;
+   $ind++;
   }
-
+  $numeC=array();
+  $puncteC=array();
+  $ind=0;
   $jmk1=$verifUser->sortCss();
-  echo "<br>";
-  echo "<br>";
-  echo "<br>";
-  echo "<br>";
-  echo "<br>";
-  echo "<br>";
-  echo "<br>";
-  echo "<br>";
+
  foreach($jmk1 as $key => $value){
-    echo $key;
-    
-    echo $value;
- 
+    $numeC[$ind]=$key;
+    $puncteC[$ind]=$value;
+    $ind++;
   }
 ?>
 <body class="board">
@@ -56,13 +52,8 @@
     <div class="leaderboard">
         <header>
             <h1>HTML</h1>
-            <img src="../../public/img/pirate1.png" alt="penguin pirate">
-            <nav>
-                <a href="" class="active">Solo</a>
-                <a href="">Duo</a>
-                <a href="">Squad</a>
-                <a href="">Solo FPP</a>
-            </nav>
+            <img src="../../public/images/monkey.png" alt="penguin pirate">
+            
         </header>
 
         <table>
@@ -70,59 +61,39 @@
               <tr>
                 <th class="rank"></th>
                 <th class="nick">Nickname</th>
-                <th class="sp">SP</th>
-                <th class="kd">K/D</th>
+                <th class="sp">Points</th>
+               
               </tr>
             </thead>
             <tbody>
                 <tr>
                     <td class="rank">1</td>
-                    <td class="nick">Sc0utOP</td>
-                    <td class="sp">6.308</td>
-                    <td class="kd">4.8</td>
+                    <td class="nick"><?php echo $numeH[0] ?></td>
+                    <td class="sp"><?php echo $puncteH[0]?></td>
+                    
                 </tr>    
 
                 <tr>
                     <td class="rank">2</td>
-                    <td class="nick">MortaL</td>
-                    <td class="sp">6.301</td>
-                    <td class="kd">4.5</td>
+                    <td class="nick"><?php echo $numeH[1] ?></td>
+                    <td class="sp"><?php echo $puncteH[1]?></td>
+                   
                 </tr>    
 
                 <tr>
                     <td class="rank">3</td>
-                    <td class="nick">CarryMinati</td>
-                    <td class="sp">5.108</td>
-                    <td class="kd">2.1</td>
+                    <td class="nick"><?php echo $numeH[2] ?></td>
+                    <td class="sp"><?php echo $puncteH[2]?></td>
+                    
                 </tr>    
 
                 <tr>
                     <td class="rank">4</td>
-                    <td class="nick">CarryMinati</td>
-                    <td class="sp">5.3</td>
-                    <td class="kd">5.1</td>
-                </tr>    
-
-                <tr>
-                    <td class="rank">5</td>
-                    <td class="nick">CarryMinati</td>
-                    <td class="sp">5.1</td>
-                    <td class="kd">2.9</td>
-                </tr>    
-
-                <tr>
-                    <td class="rank">6</td>
-                    <td class="nick">CarryMinati</td>
-                    <td class="sp">6.1</td>
-                    <td class="kd">5.7</td>
-                </tr>  
+                    <td class="nick"><?php echo $numeH[3] ?></td>
+                    <td class="sp"><?php echo $puncteH[3]?></td>
+                   
+                </tr>      
                 
-                <tr>
-                    <td class="rank">7</td>
-                    <td class="nick">CarryMinati</td>
-                    <td class="sp">4.3</td>
-                    <td class="kd">3.8</td>
-                </tr>    
             </tbody>
         </table>
 
@@ -131,13 +102,8 @@
         <div class="leaderboard">
             <header>
                 <h1>CSS</h1>
-                <img src="../../public/img/pirate2.png" alt="penguin pirate">
-                <nav>
-                    <a href="" class="active">Solo</a>
-                    <a href="">Duo</a>
-                    <a href="">Squad</a>
-                    <a href="">Solo FPP</a>
-                </nav>
+                <img src="../../public/images/lion.png" alt="penguin pirate">
+                
             </header>
     
             <table>
@@ -145,59 +111,39 @@
                   <tr>
                     <th class="rank"></th>
                     <th class="nick">Nickname</th>
-                    <th class="sp">SP</th>
-                    <th class="kd">K/D</th>
+                    <th class="sp">Points</th>
+                   
                   </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td class="rank">1</td>
-                        <td class="nick">Sc0utOP</td>
-                        <td class="sp">6.308</td>
-                        <td class="kd">4.8</td>
+                        <td class="nick"><?php echo $numeC[0] ?></td>
+                        <td class="sp"><?php echo $puncteC[0]?></td>
+                        
                     </tr>    
     
                     <tr>
                         <td class="rank">2</td>
-                        <td class="nick">MortaL</td>
-                        <td class="sp">6.301</td>
-                        <td class="kd">4.5</td>
+                        <td class="nick"><?php echo $numeC[1] ?></td>
+                        <td class="sp"><?php echo $puncteC[1]?></td>
+                        
                     </tr>    
     
                     <tr>
                         <td class="rank">3</td>
-                        <td class="nick">CarryMinati</td>
-                        <td class="sp">5.108</td>
-                        <td class="kd">2.1</td>
+                        <td class="nick"><?php echo $numeC[2] ?></td>
+                        <td class="sp"><?php echo $puncteC[2]?></td>
+                      
                     </tr>    
     
                     <tr>
                         <td class="rank">4</td>
-                        <td class="nick">CarryMinati</td>
-                        <td class="sp">5.3</td>
-                        <td class="kd">5.1</td>
+                        <td class="nick"><?php echo $numeC[3] ?></td>
+                        <td class="sp"><?php echo $puncteC[3]?></td>
+                       
                     </tr>    
     
-                    <tr>
-                        <td class="rank">5</td>
-                        <td class="nick">CarryMinati</td>
-                        <td class="sp">5.1</td>
-                        <td class="kd">2.9</td>
-                    </tr>    
-    
-                    <tr>
-                        <td class="rank">6</td>
-                        <td class="nick">CarryMinati</td>
-                        <td class="sp">6.1</td>
-                        <td class="kd">5.7</td>
-                    </tr>  
-                    
-                    <tr>
-                        <td class="rank">7</td>
-                        <td class="nick">CarryMinati</td>
-                        <td class="sp">4.3</td>
-                        <td class="kd">3.8</td>
-                    </tr>    
                 </tbody>
             </table>
     
@@ -206,13 +152,8 @@
             <div class="leaderboard">
                 <header>
                     <h1>ALL</h1>
-                    <img src="../../public/img/pirate3.png" alt="penguin pirate">
-                    <nav>
-                        <a href="" class="active">Solo</a>
-                        <a href="">Duo</a>
-                        <a href="">Squad</a>
-                        <a href="">Solo FPP</a>
-                    </nav>
+                    <img src="../../public/images/tiger.png" alt="penguin pirate">
+                    
                 </header>
         
                 <table>
@@ -220,8 +161,8 @@
                       <tr>
                         <th class="rank"></th>
                         <th class="nick">Nickname</th>
-                        <th class="sp">SP</th>
-                        <th class="kd">K/D</th>
+                        <th class="sp">Points</th>
+                       
                       </tr>
                     </thead>
                     <tbody>
@@ -229,50 +170,31 @@
                             <td class="rank">1</td>
                             <td class="nick">Sc0utOP</td>
                             <td class="sp">6.308</td>
-                            <td class="kd">4.8</td>
+                           
                         </tr>    
         
                         <tr>
                             <td class="rank">2</td>
                             <td class="nick">MortaL</td>
                             <td class="sp">6.301</td>
-                            <td class="kd">4.5</td>
+                           
                         </tr>    
         
                         <tr>
                             <td class="rank">3</td>
                             <td class="nick">CarryMinati</td>
                             <td class="sp">5.108</td>
-                            <td class="kd">2.1</td>
+                           
                         </tr>    
         
                         <tr>
                             <td class="rank">4</td>
                             <td class="nick">CarryMinati</td>
                             <td class="sp">5.3</td>
-                            <td class="kd">5.1</td>
+                           
                         </tr>    
         
-                        <tr>
-                            <td class="rank">5</td>
-                            <td class="nick">CarryMinati</td>
-                            <td class="sp">5.1</td>
-                            <td class="kd">2.9</td>
-                        </tr>    
-        
-                        <tr>
-                            <td class="rank">6</td>
-                            <td class="nick">CarryMinati</td>
-                            <td class="sp">6.1</td>
-                            <td class="kd">5.7</td>
-                        </tr>  
-                        
-                        <tr>
-                            <td class="rank">7</td>
-                            <td class="nick">CarryMinati</td>
-                            <td class="sp">4.3</td>
-                            <td class="kd">3.8</td>
-                        </tr>    
+                       
                     </tbody>
                 </table>
         
@@ -280,249 +202,5 @@
             </div>
     
 </body>
-<!-- 
-<body class="board">
-
-    <div class="head">
-        <div class="game-title">
-            <img src="../../public/img/thumbs/title1.png" alt="title">
-        </div> 
-    
-        <h1> 𝕷𝖊𝖆𝖉𝖊𝖗𝕭𝖔𝖆𝖗𝖉 </h1> 
-    
-        <div class="exit-btn">
-                <img src="../../public/img/exit2.png" alt="exit" onclick="javascript:window.location='http://127.0.0.1:5500/mvc/app/views/menu.html'">
-        </div> 
-
-        </div>
-
-    
-
-    <div class="leaderboard">
-        <header>
-            <h1>HTML</h1>
-            <img src="../../public/img/pirate1.png" alt="penguin pirate">
-            <nav>
-                <a href="" class="active">Solo</a>
-                <a href="">Duo</a>
-                <a href="">Squad</a>
-                <a href="">Solo FPP</a>
-            </nav>
-        </header>
-
-        <table>
-           <thead>
-              <tr>
-                <th class="rank"></th>
-                <th class="nick">Nickname</th>
-                <th class="sp">SP</th>
-                <th class="kd">K/D</th>
-              </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="rank">1</td>
-                    <td class="nick">Sc0utOP</td>
-                    <td class="sp">6.308</td>
-                    <td class="kd">4.8</td>
-                </tr>    
-
-                <tr>
-                    <td class="rank">2</td>
-                    <td class="nick">MortaL</td>
-                    <td class="sp">6.301</td>
-                    <td class="kd">4.5</td>
-                </tr>    
-
-                <tr>
-                    <td class="rank">3</td>
-                    <td class="nick">CarryMinati</td>
-                    <td class="sp">5.108</td>
-                    <td class="kd">2.1</td>
-                </tr>    
-
-                <tr>
-                    <td class="rank">4</td>
-                    <td class="nick">CarryMinati</td>
-                    <td class="sp">5.3</td>
-                    <td class="kd">5.1</td>
-                </tr>    
-
-                <tr>
-                    <td class="rank">5</td>
-                    <td class="nick">CarryMinati</td>
-                    <td class="sp">5.1</td>
-                    <td class="kd">2.9</td>
-                </tr>    
-
-                <tr>
-                    <td class="rank">6</td>
-                    <td class="nick">CarryMinati</td>
-                    <td class="sp">6.1</td>
-                    <td class="kd">5.7</td>
-                </tr>  
-                
-                <tr>
-                    <td class="rank">7</td>
-                    <td class="nick">CarryMinati</td>
-                    <td class="sp">4.3</td>
-                    <td class="kd">3.8</td>
-                </tr>    
-            </tbody>
-        </table>
-
-     </div>
-
-        <div class="leaderboard">
-            <header>
-                <h1>CSS</h1>
-                <img src="../../public/img/pirate2.png" alt="penguin pirate">
-                <nav>
-                    <a href="" class="active">Solo</a>
-                    <a href="">Duo</a>
-                    <a href="">Squad</a>
-                    <a href="">Solo FPP</a>
-                </nav>
-            </header>
-    
-            <table>
-               <thead>
-                  <tr>
-                    <th class="rank"></th>
-                    <th class="nick">Nickname</th>
-                    <th class="sp">SP</th>
-                    <th class="kd">K/D</th>
-                  </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="rank">1</td>
-                        <td class="nick">Sc0utOP</td>
-                        <td class="sp">6.308</td>
-                        <td class="kd">4.8</td>
-                    </tr>    
-    
-                    <tr>
-                        <td class="rank">2</td>
-                        <td class="nick">MortaL</td>
-                        <td class="sp">6.301</td>
-                        <td class="kd">4.5</td>
-                    </tr>    
-    
-                    <tr>
-                        <td class="rank">3</td>
-                        <td class="nick">CarryMinati</td>
-                        <td class="sp">5.108</td>
-                        <td class="kd">2.1</td>
-                    </tr>    
-    
-                    <tr>
-                        <td class="rank">4</td>
-                        <td class="nick">CarryMinati</td>
-                        <td class="sp">5.3</td>
-                        <td class="kd">5.1</td>
-                    </tr>    
-    
-                    <tr>
-                        <td class="rank">5</td>
-                        <td class="nick">CarryMinati</td>
-                        <td class="sp">5.1</td>
-                        <td class="kd">2.9</td>
-                    </tr>    
-    
-                    <tr>
-                        <td class="rank">6</td>
-                        <td class="nick">CarryMinati</td>
-                        <td class="sp">6.1</td>
-                        <td class="kd">5.7</td>
-                    </tr>  
-                    
-                    <tr>
-                        <td class="rank">7</td>
-                        <td class="nick">CarryMinati</td>
-                        <td class="sp">4.3</td>
-                        <td class="kd">3.8</td>
-                    </tr>    
-                </tbody>
-            </table>
-    
-            </div>
-
-            <div class="leaderboard">
-                <header>
-                    <h1>ALL</h1>
-                    <img src="../../public/img/pirate3.png" alt="penguin pirate">
-                    <nav>
-                        <a href="" class="active">Solo</a>
-                        <a href="">Duo</a>
-                        <a href="">Squad</a>
-                        <a href="">Solo FPP</a>
-                    </nav>
-                </header>
-        
-                <table>
-                   <thead>
-                      <tr>
-                        <th class="rank"></th>
-                        <th class="nick">Nickname</th>
-                        <th class="sp">SP</th>
-                        <th class="kd">K/D</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="rank">1</td>
-                            <td class="nick">Sc0utOP</td>
-                            <td class="sp">6.308</td>
-                            <td class="kd">4.8</td>
-                        </tr>    
-        
-                        <tr>
-                            <td class="rank">2</td>
-                            <td class="nick">MortaL</td>
-                            <td class="sp">6.301</td>
-                            <td class="kd">4.5</td>
-                        </tr>    
-        
-                        <tr>
-                            <td class="rank">3</td>
-                            <td class="nick">CarryMinati</td>
-                            <td class="sp">5.108</td>
-                            <td class="kd">2.1</td>
-                        </tr>    
-        
-                        <tr>
-                            <td class="rank">4</td>
-                            <td class="nick">CarryMinati</td>
-                            <td class="sp">5.3</td>
-                            <td class="kd">5.1</td>
-                        </tr>    
-        
-                        <tr>
-                            <td class="rank">5</td>
-                            <td class="nick">CarryMinati</td>
-                            <td class="sp">5.1</td>
-                            <td class="kd">2.9</td>
-                        </tr>    
-        
-                        <tr>
-                            <td class="rank">6</td>
-                            <td class="nick">CarryMinati</td>
-                            <td class="sp">6.1</td>
-                            <td class="kd">5.7</td>
-                        </tr>  
-                        
-                        <tr>
-                            <td class="rank">7</td>
-                            <td class="nick">CarryMinati</td>
-                            <td class="sp">4.3</td>
-                            <td class="kd">3.8</td>
-                        </tr>    
-                    </tbody>
-                </table>
-        
-                </div>
-    
-</body> -->
 
 </html>

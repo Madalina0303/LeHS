@@ -54,13 +54,13 @@
       }
       switch ($progressC['level']) {
         case "bc":
-          $nivelC = "Beginner Html";
+          $nivelC = "Beginner Css";
           break;
         case "ic":
-          $nivelC = "Intermediate Html";
+          $nivelC = "Intermediate Css";
           break;
         case "ac":
-          $nivelC = "Advanced Html";
+          $nivelC = "Advanced Css";
           break;
       }
 

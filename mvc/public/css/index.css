@@ -5,25 +5,46 @@
 }
 
 
+body{
+    /* background-color:  #f5f7f9; */
+background-image: url("../../public/images/backIndex.jpg");
+min-height: 100%;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+background-size: cover;
+}
+footer{
+    background-color: orange;
+    
+    width: 100vw;
+}
+footer div:first-child{
+    padding-top: 1em;
+}
+footer div{
 
-.hero{
-    height:100%;
-    width:100%;
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.13),rgba(0, 12, 6, 0.158)),url(  "../../public/img/img/Pavaloi.svg");
-    */
-    background-color: rgb(233, 223, 223);
+margin-left:10vw;
+}
+/* .hero{
+    height:100vh;
+    width:100vw;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.13),rgba(0, 12, 6, 0.158)),url(  "../../public/images/backIndex.jpg");
+   
+    
     background-position: center;
     background-size: cover;
     position:fixed;
     
-}
+} */
 
 .characters {
 
     position:relative ;
-    top:120px;
-    left:100px;
+    top:4em;
+    left:2em;
     height:200px;
+    z-index:-1;
 
 }
 
@@ -69,13 +90,14 @@
     width: 390px;
     height:480px; 
     position:relative;
-    background:#fff;
+    /* background:#fff; */
+    background-color: #fff9d9;
     padding:6px;
     overflow: hidden;
     border-radius: 5vw;
-    margin-top:8%;
-    margin-left:15%;
-       
+    margin-top:6%;
+    margin-left:10%;
+    
 }
 
 
@@ -83,7 +105,7 @@
 
 .button-box{
     width:220px;
-    margin:35px;
+    margin:10%;
     position:relative;
     box-shadow: 0 0 20px 9px #ff61241f;
     border-radius: 30px;
@@ -180,10 +202,10 @@ span{
 
 @media  screen and (max-width:1175px) {
 
-    .form-box{
-        margin-bottom:50%;
+     .form-box{
+        /* margin-bottom:50%; */
         margin-left:25%;
-    }
+    } 
 
     .characters{
         display: none;
@@ -196,31 +218,37 @@ span{
 
 @media  screen and (max-width:1090px) {
 
-    .form-box{
+    /* .form-box{
         margin-top:5em;
     }
-    
+     */
         
     }
     
     @media  screen and (max-width:550px) {
 
-        .characters img{
+        /* .characters img{
             width:80%;
             
-        }
-
-        .form-box{
-            width:290px;
+        } */
+      /* .submit-btn{
+          margin-left:-1em;
+      } */
+         .form-box{
+            width:60vw;
             text-align: center;
+            margin-left: 20vw;
+            
         }
         
         .button-box {
-            margin-left:0px;
+        
+           left:-1em;
         }
 
         .input-group{
             width:200px;
+            margin-left:-1em;
         }
 
         .span{
@@ -230,10 +258,16 @@ span{
 
         .check-box{
             margin-left:0px;
-        }
-      
+        } 
+       
            
     }
-
+ @media screen and (max-width:320px){
+   
+    .input-group{
+        margin-left:-2.7em;
+    }
+    
+} 
 
 

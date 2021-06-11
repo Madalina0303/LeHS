@@ -127,6 +127,12 @@ try {
       body{
       background-image: url("../../public/images/htr.jpg");
       }
+      .cod{
+        background-color: rgb(235, 139, 30);
+      }
+      .Verify,.next,#ln1,#lnmica,#lnspec,#lnmica_subtire,#lnsubtire{
+        background-color: #52dd36;
+      }
       `;
       document.head.appendChild(style);
       getResource(level, parseInt(challenge) - 1);
@@ -137,7 +143,13 @@ try {
       var style = document.createElement('style');
       style.innerHTML = `
       body{
-      background-image: url("../../public/images/ploua1.jpg");
+      background-image: url("../../public/images/backProfil.jpg");
+      }
+      .cod{
+        background-color: rgb(235, 139, 30);
+      }
+      .Verify,.next,#ln1,#lnmica,#lnspec,#lnmica_subtire,#lnsubtire,#ln11{
+        background-color: #52dd36;
       }
       `;
       document.head.appendChild(style);

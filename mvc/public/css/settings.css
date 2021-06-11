@@ -1,6 +1,8 @@
 body{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.13),rgba(0, 12, 6, 0.158)),url(https://static.wikia.nocookie.net/club-penguin-rewritten/images/a/ac/Dock_2020.png/revision/latest?cb=20200103030722);
-
+    background-image:linear-gradient(rgba(0, 0, 0, 0.13),rgba(0, 12, 6, 0.158)),url("../images/backSet.jpg");
+    background-size:cover;
+    min-height: 100vh;
+    background-repeat: no-repeat;
 }
 
 

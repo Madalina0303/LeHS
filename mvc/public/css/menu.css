@@ -18,7 +18,7 @@ body {
     display: block;
 }
 .button:nth-child(1) {
-    background: url(https://cdnb.artstation.com/p/assets/images/images/004/390/815/large/rachel-eady-the-wilds-room-2.jpg?1483343041) center center no-repeat;
+    background:url("../images/menu1.jpg") center center no-repeat;
 
     background-size: cover;
 }
@@ -51,7 +51,7 @@ body {
     left: 0;
     width: 100%;
     height: 300px;
-    background: url(https://clubpenguinmountains.com/wp-content/uploads/2020/01/pufflewilds.jpg?w=662) center center no-repeat;
+    background: url("../images/menu2.jpg") center center no-repeat;
     background-size: cover;
     overflow: hidden;
     display: block;
@@ -97,7 +97,7 @@ body {
     left: 0;
     width: 100%;
     height: 300px;
-    background: url(https://static.wikia.nocookie.net/club-penguin-rewritten/images/a/ac/Dock_2020.png/revision/latest?cb=20200103030722) center center no-repeat;
+    background: url("../images/menu3.jpg") center center no-repeat;
     background-size: cover;
     overflow: hidden;
     display: block;
@@ -336,7 +336,7 @@ body {
     left: 0;
     width: 100%;
     height: 300px;
-    background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c794209a-4372-48c7-9202-95e7269a3159/da50129-2e5ab58c-4232-4893-8071-e2933d25e01f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvYzc5NDIwOWEtNDM3Mi00OGM3LTkyMDItOTVlNzI2OWEzMTU5XC9kYTUwMTI5LTJlNWFiNThjLTQyMzItNDg5My04MDcxLWUyOTMzZDI1ZTAxZi5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.19o-boRiWLVrxuTvG868BsmLPZYkLGChFdcBIwC9jTw) center center no-repeat;
+    background: url("../images/menu4.jpg") center center no-repeat;
     background-size: cover;
     overflow: hidden;
     display: block;
@@ -546,7 +546,7 @@ body {
     left: 0;
     width: 100%;
     height: 300px;
-    background: url(https://www.bleepstatic.com/content/posts/2019/07/31/ClubPenguinRewritten.jpg) center center no-repeat;
+    background: url("../images/menu5.jpg") center center no-repeat;
     background-size: cover;
     overflow: hidden;
     display: block;

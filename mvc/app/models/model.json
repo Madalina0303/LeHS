@@ -76,7 +76,7 @@
             "level":"advancedHtml",
             "challenge":1,
             "require":"Complete the html elements with the classes and id attributes.For the first and last exercises use \"animal\"  respectively \"jungle\" as unique identifier. For the others white spaces use the following name: \"species\" ",
-            "template":["<p> &lt h1 </p><textarea id=\"ln1\"></textarea><h1> The animals live in jungle </h1> <p> &lt/h1 &gt</p>",
+            "template":["<p> &lt h1 </p><textarea id=\"lnspec\"></textarea><h1> The animals live in jungle </h1> <p> &lt/h1 &gt</p>",
                         "<p> &lt div </p><textarea id=\"ln1\"></textarea><p> &lt img src=\"species.jpg\" alt= \"species\" &gt</p> <p> &lt /div &gt </p>",
                         "<p> &lt span </p><textarea id=\"lnspec\"></textarea><p> In jungle live different species of animals: parrot, monkey,snake, jaguar. </p> <p> &lt /span &gt </p>",
                         "<p> &lt section </p><textarea id=\"lnspec\"></textarea><h1> &lt h1 &gt  The animals live in jungle &lt /h1 &gt </h1> <p> &lt/section &gt</p>"
@@ -88,7 +88,7 @@
             "challenge":2,
             "require":"In the first form add an input field with the type \"button\" and the value \"ok\". For the next one define a checkbox with name+ id \"tiger \" and the label \"Tigers run fast. \" . The 3rd require is to complete the form with a text input having \"favorit_animal\" as id. In the last one you must submit the form using \"submit \" as value",
             "template":["<p>&lt form &gt</p><textarea id=\"ln1\"></textarea><p>&lt /form &gt</p>",
-                        "<p>&lt form action=\"/action.php\"&gt</p><textarea id=\"ln1\"></textarea><textarea id=\"ln1\"></textarea><p> &lt input type=\"submit\" value=\"submit\" &gt </p><p>&lt /form &gt</p>",
+                        "<p>&lt form action=\"/action.php\"&gt</p><textarea id=\"ln11\"></textarea><br><textarea id=\"ln11\"></textarea><p> &lt input type=\"submit\" value=\"submit\" &gt </p><p>&lt /form &gt</p>",
                         "<p>&lt form action=\"/action.php\"&gt</p><p>&lt label for=\"favorit_animal\">My favorite animal:&lt /label &gt &lt br &gt </p><textarea id=\"lnspec\"></textarea><p> &lt input type=\"submit\" value=\"submit\" &gt </p><p>&lt /form &gt</p>",
                         "<p>&lt form action=\"/action.php\"&gt</p><p>&lt label for=\"Secret code\">Type your secret code bellow:&lt /label &gt &lt br &gt </p> <p> &lt input type=\"password\" &gt </p> <textarea id=\"lnspec\"></textarea><p>&lt /form &gt</p> "
                     ],
