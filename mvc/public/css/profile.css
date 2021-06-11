@@ -1,9 +1,7 @@
 body{
-  background-repeat: no-repeat;
   margin:0;
-  min-height: 100vh;
   padding:0;
-  background-image :linear-gradient(rgba(0, 0, 0, 0.13),rgba(0, 12, 6, 0.158)),url("../images/backProfil.jpg");
+  background-image :linear-gradient(rgba(0, 0, 0, 0.13),rgba(0, 12, 6, 0.158)),url(https://cdnb.artstation.com/p/assets/images/images/004/390/815/large/rachel-eady-the-wilds-room-2.jpg?1483343041);
   background-size: cover;
 }
 
@@ -49,23 +47,18 @@ h1{
     margin-left: 2%;
     margin-top:3%;
     text-align: center;
-    /* background-image:linear-gradient(#AED6F1  ,#1E8449, #AED6F1 ); */
-    background-image:linear-gradient(#8b9a3d  ,#7fc1e3, #ae7820 );
-
+    background-image:linear-gradient(#AED6F1  ,#1E8449, #AED6F1 );
     box-shadow: 2px 2px 16px 1px #aaa;
   
   }
   
-  a:link{
-    color:white;
-  }
 
   button {
     border: none;
     outline: 0;
     display: inline-block;
     padding: 8px;
-    
+    color: white;
     background-color: #000;
     text-align: center;
     cursor: pointer;
@@ -92,9 +85,7 @@ h1{
     margin-left: 5%;
     margin-top:3%;
     text-align: left;
-    /* background-image:linear-gradient(#A9DFBF,#85C1E9 ,#1E8449); */
-    background-image:linear-gradient(#8b9a3d  ,#7fc1e3, #ae7820 );
-
+    background-image:linear-gradient(#A9DFBF,#85C1E9 ,#1E8449);
     border-radius: 10%;
     box-shadow: 2px 2px 16px 1px #aaa;
   }
@@ -149,8 +140,7 @@ circle {
 }
 
 .percent1 circle:nth-child(2) {
-  /* stroke-dashoffset: calc(440 - (440 * 5.5) / 100);  */
-  /* stroke-dashoffset: 500; */
+  stroke-dashoffset: calc(440 - (440 * 75) / 100); /* Here's what's changed */
   stroke: green;
   animation: percent 1.5s linear;
   animation-delay: 1s;
@@ -300,12 +290,7 @@ span {
   
  
   
-  @media  screen and (max-width:480px) {
-    .card h1{
-      font-size: 20px;
-      
-    }
-  }
+
   @media  screen and (max-width:950px) {
 
     .cards{
@@ -323,3 +308,8 @@ span {
     
         
     }
+   
+    
+  
+
+  

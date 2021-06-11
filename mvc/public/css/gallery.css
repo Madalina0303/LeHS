@@ -2,7 +2,6 @@
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.13),rgba(0, 12, 6, 0.158)),url(https://static.wikia.nocookie.net/club-penguin-rewritten/images/a/ac/Dock_2020.png/revision/latest?cb=20200103030722);
 
-    display:block;
  }
  
  .wrapper-gallery{
@@ -14,7 +13,7 @@
 .game-title{
     width: 70px;
     height: 70px;
-    position:absolute;
+    position:relative;
     left: 5px;
     top:10px;
     transform: rotate(-10deg);
@@ -65,8 +64,8 @@
     display: flex;
     justify-content: space-around;
     cursor:pointer;
-    -webkit-transform: scaleX(-1);
-   transform: scaleX(-1);
+/*     -webkit-transform: scaleX(-1);
+   transform: scaleX(-1); */
 
 
 }
@@ -79,8 +78,6 @@
     grid-template-rows: auto;
     grid-gap:10px;
     grid-template-areas:
-    "gallery-h1 gallery-h1 gallery-h1 gallery-h1"
-    "gallery-h3 gallery-h3 gallery-h3 gallery-h3"
     "img1 img2 img3 img4"
     "img5 img6 img3 img7"
     "img5 img8 img9 img10";
@@ -235,23 +232,10 @@
 }
 
  .gallery-img{
-     width:45%;
- }
-
- .gallery-img:last-child{
      width:100%;
-
  }
 
     
 }
-
-@media  screen and (max-width:600px) {
-    
-    .gallery-img:last-child{
-        width:100%;
-   
-    }
    
        
-   }
